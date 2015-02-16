@@ -1,6 +1,6 @@
 {
   "name": "precise-theme-starter",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "description": "Example of how to theme a Precise Profile and Portfolio. Use it as a starter for your own company branding",
   "repository": {
     "type": "git",
@@ -13,7 +13,10 @@
   "devDependencies": {
     "express": "^4.11.2",
     "grunt": "~0.4.5",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-copy": "^0.7.0",
     "grunt-contrib-watch": "~0.6.1",
-    "grunt-express": "^1.4.1"
+    "grunt-express": "^1.4.1",
+    "grunt-release": "^0.11.0"
   }
 }
