@@ -109,14 +109,11 @@ header h2, header p {
   text-align: center;
 }
 
-.experiences h4, .links h4 {
+h4 {
   margin-right: 20px;
 }
 
-.experiences h4, .experiences h4 p, .experiences h5 {
+h4, h4 p, h5 {
   display: inline;
 }
 
-.links h4{
-  display: inline;
-}
