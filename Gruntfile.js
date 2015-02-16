@@ -35,13 +35,7 @@ module.exports = function(grunt) {
 
     release: {
       options: {
-        add: false, //default: true
-        commit: false, //default: true
-        tag: false, //default: true
-        push: false, //default: true
-        pushTags: false, //default: true
-        npm: true, //default: true
-        folder: 'build', //default project root
+        npm: false //default: true
       }
     },
     clean: ["build"]
