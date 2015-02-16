@@ -8,7 +8,8 @@
   },
   "dependencies": {
     "handlebars": "~2.0.0",
-    "coffee-script": "^1.7.1"
+    "coffee-script": "^1.7.1",
+    "node-markdown": "*"
   },
   "devDependencies": {
     "express": "^4.11.2",

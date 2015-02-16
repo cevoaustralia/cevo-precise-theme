@@ -1,6 +1,9 @@
 require "coffee-script/register"
 fs = require("fs")
+Markdown   = require("node-markdown").Markdown
 Handlebars = require("handlebars")
+
+Handlebars.registerHelper 'md', Markdown
 
 renderProfile= (profile) ->
   css = fs.readFileSync(__dirname + "/style.css", "utf-8")
