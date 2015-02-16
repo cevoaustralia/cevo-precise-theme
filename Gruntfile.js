@@ -24,33 +24,18 @@ module.exports = function(grunt) {
         }
       }
     },
-    copy: {
-      build: {
-        src: [ '**', '!**/node_modules/**',
-          "!gitignore", '!Gruntfile.js', '!server.coffee', '!README.md'],
-        dest: 'build',
-        expand: true
-      }
-    },
 
     release: {
       options: {
-        npm: false //default: true
+        npm: false
       }
     },
-    clean: ["build"]
   });
 
   grunt.loadNpmTasks('grunt-express');
-  grunt.loadNpmTasks('grunt-contrib-clean');
-  grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-release');
 
   // Default task.
   grunt.registerTask('default', ['express', 'express-keepalive']);
-
-  grunt.registerTask('build', [
-    'clean', 'copy:build'
-    ]);
 
 };
