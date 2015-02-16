@@ -11,7 +11,7 @@ module.exports = function(grunt) {
         options: {
           port: 9001,
           bases: './',
-          server: path.resolve('./test/testServer')
+          server: path.resolve('server')
         }
       }
     },

@@ -1,12 +1,10 @@
 {
-  "id": "abc123",
   "name": "Alexander O'Keefe",
   "title": "Designer",
   "bio": "Odio voluptate necessitatibus. Omnis amet asperiores maiores est voluptate. Ad voluptas consequatur atque ut est id id. Eveniet qui exercitationem cumque dignissimos. Enim et officiis sunt. Repellat quos est quas earum sed consequatur pariatur.Pariatur eveniet illum. Sunt quis excepturi quasi. Veritatis ut ipsa. Excepturi in fugit nostrum deleniti. Soluta quo qui non. Quisquam voluptatibus incidunt ut dolorum dolores. Doloremque saepe unde aut. Aut voluptatem perspiciatis.",
   "passion": "Passionate storyteller. Constantly in motion. Eager traveler & cultural explorer.",
   "updated_at": "2015-01-30T03:33:57.750Z",
   "photo_url": "http://api.randomuser.me/portraits/women/54.jpg",
-  "belongs_to": "Acme Co.",
   "skills": [
     {
       "name": "Branding"
@@ -34,40 +32,45 @@
     {
       "place": "Qantas",
       "description": "Omnis et voluptatum odio quasi. Aut id nostrum corrupti eius. Vel esse ea. Hic placeat eum quos accusamus. Ea nemo consectetur animi laboriosam totam.",
-      "subtitle": "Senior UX Designer"
+      "role": "Senior UX Designer"
     },
     {
       "place": "Woolworths",
       "description": "Voluptatem accusantium voluptatem voluptatibus dolorum voluptatem quos error. Nam id quibusdam qui consequatur eveniet. Sunt ut illum optio commodi dolor.",
-      "subtitle": "Visual Designer"
+      "role": "Visual Designer"
     },
     {
       "place": "Telstra",
       "description": "Et aut voluptate earum omnis similique. Cumque necessitatibus facere reprehenderit nobis. Praesentium est nobis aut voluptatem dolorem quasi. Perferendis rerum architecto dolor minus cupiditate.",
-      "subtitle": "UX Consultant"
+      "role": "UX Consultant"
     }
   ],
   "education_and_trainings": [
     {
-      "year": "Master Degree of Design 2006",
-      "description": "University of Design"
+      "place": "University of Design",
+      "period": "2006",
+      "description": "Master Degree of Design"
     },
     {
-      "year": "Bachelor of Arts 2005",
-      "description": "University of Design"
+      "place": "University of Design",
+      "period": "2005",
+      "description": "Bachelor of Arts 2005"
     }
   ],
   "links": [
     {
-      "title": "github",
+      "type": "github",
+      "username": "example",
       "url": "http://github.com/example"
     },
     {
-      "title": "twitter",
+      "type": "twitter",
+      "username": "example",
       "url": "http://twitter.com/example"
     },
     {
-      "title": "email",
+      "type": "email",
+      "username": "hellp",
       "url": "hello@example.com"
     }
   ],
