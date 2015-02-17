@@ -1,10 +1,12 @@
 {
-  "name": "Alexander O'Keefe",
-  "title": "Designer",
-  "bio": "Odio voluptate necessitatibus. Omnis amet asperiores maiores est voluptate. Ad voluptas consequatur atque ut est id id. Eveniet qui exercitationem cumque dignissimos. Enim et officiis sunt. Repellat quos est quas earum sed consequatur pariatur.Pariatur eveniet illum. Sunt quis excepturi quasi. Veritatis ut ipsa. Excepturi in fugit nostrum deleniti. Soluta quo qui non. Quisquam voluptatibus incidunt ut dolorum dolores. Doloremque saepe unde aut. Aut voluptatem perspiciatis.",
-  "passion": "Passionate storyteller. Constantly in motion. Eager traveler & cultural explorer.",
-  "updated_at": "2015-01-30T03:33:57.750Z",
-  "photo_url": "http://api.randomuser.me/portraits/women/54.jpg",
+  "about": {
+    "name": "Alexa O'Keefe",
+    "title": "Designer",
+    "bio": "Odio voluptate necessitatibus. Omnis amet asperiores maiores est voluptate. Ad voluptas consequatur atque ut est id id. Eveniet qui exercitationem cumque dignissimos. Enim et officiis sunt. Repellat quos est quas earum sed consequatur pariatur.Pariatur eveniet illum. Sunt quis excepturi quasi. Veritatis ut ipsa. Excepturi in fugit nostrum deleniti. Soluta quo qui non. Quisquam voluptatibus incidunt ut dolorum dolores. Doloremque saepe unde aut. Aut voluptatem perspiciatis.",
+    "passion": "Passionate storyteller. Constantly in motion. Eager traveler & cultural explorer.",
+    "updated_at": "2015-01-30T03:33:57.750Z",
+    "photo_url": "http://api.randomuser.me/portraits/women/54.jpg"
+  },
   "skills": [
     {
       "name": "Branding"
@@ -31,16 +33,19 @@
   "experiences": [
     {
       "place": "Qantas",
+      "period": "Oct 2014 - Current",
       "description": "Omnis et voluptatum odio quasi. *Aut id nostrum corrupti eius*. Vel esse ea. Hic placeat eum quos accusamus. Ea nemo consectetur animi laboriosam totam.",
       "role": "Senior UX Designer"
     },
     {
       "place": "Woolworths",
+      "period": "Jul 2014 -  Oct 2014",
       "description": "Voluptatem accusantium voluptatem voluptatibus dolorum voluptatem quos error. Nam id quibusdam qui consequatur eveniet. Sunt ut illum optio commodi dolor.",
       "role": "Visual Designer"
     },
     {
       "place": "Telstra",
+      "period": "Jan 2014 -  Jun 2014",
       "description": "Et aut voluptate earum omnis similique. Cumque necessitatibus facere reprehenderit nobis. Praesentium est nobis aut voluptatem dolorem quasi. Perferendis rerum architecto dolor minus cupiditate.",
       "role": "UX Consultant"
     }
@@ -57,7 +62,7 @@
       "description": "Bachelor of Arts 2005"
     }
   ],
-  "links": [
+  "presence": [
     {
       "type": "github",
       "username": "example",
