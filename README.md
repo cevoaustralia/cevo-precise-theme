@@ -61,6 +61,21 @@ Also worthy of a mention is the test Profile and Portfolio JSON located in
 the `./test` directory.  You can modify the JSON to suit your needs.  It's only
 used during development.
 
+### Images
+
+You may want to include images in the theme you are developing. There are two options:
+
+1. **Reference assets from an external URL.** You may have these images already hosted elsewhere. Simply reference them via their HTTP URL.
+```
+<img src="http://external.com/images/example/png" />
+```
+2. **Use Base64 encoding in CSS.** You can embed images directly into your CSS. Note that there are some [limitations](http://css-tricks.com/data-uris/) to using this approach.
+```
+.image {
+  background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIA...);
+}
+```
+
 ## Deployment
 
 When you are done with **making it look good** it's time to deploy:
