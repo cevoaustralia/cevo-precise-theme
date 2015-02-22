@@ -42,6 +42,10 @@ header {
   color: white;
 }
 
+.portfolio header {
+  text-align: left;
+  margin-bottom: 50px;
+}
 header h2, header p {
   color: white;
 }
@@ -81,6 +85,11 @@ header h2, header p {
   content: '"';
 }
 
+.image-wrapper img {
+  height: 220px;
+  width: 220px;
+  overflow: hidden;
+}
 .photo {
   text-align: center;
   margin-top: 50px;
@@ -107,13 +116,5 @@ header h2, header p {
 
 .skills, .experiences, .education, .links {
   text-align: center;
-}
-
-h4 {
-  margin-right: 20px;
-}
-
-h4, h4 p, h5 {
-  display: inline;
 }
 

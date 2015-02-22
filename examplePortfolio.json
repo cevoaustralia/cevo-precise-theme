@@ -1,0 +1,37 @@
+{
+  "name": "Design team for Acme product",
+  "comment": "Ad voluptas consequatur atque ut est id id. Eveniet qui exercitationem cumque dignissimos. Enim et officiis sunt.",
+  "theme": "a-theme-0.0.0",
+  "contact": {
+    "name": "James Smith",
+    "number": "0400 123 123",
+    "email": "james.smith@example.com"
+  },
+  "status": "active",
+  "snapshots": [
+    {
+      "url" : "http://localhost:9000/p/alexa-okeefe/yx3BxZ_vAzao876hXZCD",
+      "profile": {
+        "about": {
+          "name": "Alexa O'Keefe",
+          "title": "Designer",
+          "bio": "Odio voluptate necessitatibus. Omnis amet asperiores maiores est voluptate. Ad voluptas consequatur atque ut est id id. Eveniet qui exercitationem cumque dignissimos. Enim et officiis sunt. Repellat quos est quas earum sed consequatur pariatur.Pariatur eveniet illum. Sunt quis excepturi quasi. Veritatis ut ipsa. Excepturi in fugit nostrum deleniti. Soluta quo qui non. Quisquam voluptatibus incidunt ut dolorum dolores. Doloremque saepe unde aut. Aut voluptatem perspiciatis.",
+          "passion": "Passionate storyteller. Constantly in motion. Eager traveler & cultural explorer.",
+          "photo_url": "http://api.randomuser.me/portraits/women/54.jpg"
+        }
+      }
+    },
+    {
+      "url" : "http://localhost:9000/p/jamie-brock/gi5TxvA92Nmp4Rr",
+      "profile": {
+        "about": {
+          "name": "Jamie Brock",
+          "title": "Mobile UX Lead",
+          "bio": "An expert in crafting user-centered design solutions by incorporating business strategy, research, and analytics.",
+          "passion": "Eveniet qui exercitationem cumque dignissimos. Enim et officiis sunt. Repellat quos est quas earum sed consequatur pariatur.Pariatur eveniet illum.",
+          "photo_url": "http://api.randomuser.me/portraits/men/25.jpg"
+        }
+      }
+    }
+  ]
+}

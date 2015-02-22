@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
+
+  <title>{{portfolio.name}}</title>
+
+  <link href="https:///maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+
+  <style type="text/css">
+    {{{css}}}
+  </style>
+  </head>
+  <body class="portfolio">
+    <div class="container-fluid">
+
+      <header class="row">
+        <div class="col-md-offset-1 col-md-5">
+          <h1>{{portfolio.name}}</h1>
+          <h4>{{portfolio.comment}}</h4>
+        </div>
+        <div class="col-md-offset-1 col-md-5">
+          <h1>Contact</h1>
+          <h4>{{portfolio.contact.name}}</h4>
+          <h4>{{portfolio.contact.number}}</h4>
+          <h4>{{portfolio.contact.email}}</h4>
+        </div>
+
+      </header>
+
+      {{#if portfolio.snapshots}}
+      <div class="row">
+        <div class="col-md-offset-2 col-md-10">
+          <div class="row">
+            {{#each portfolio.snapshots}}
+              <div class="col-md-3">
+                <div>
+                  <div class="image-wrapper">
+                    <img src="{{this.profile.about.photo_url}}" />
+                  </div>
+                  <h5 class="text-center">
+                    {{this.profile.about.name}}
+                    <br/>
+                    <small>{{this.profile.about.title}}</small>
+                  </h5>
+                  <i>{{this.profile.about.passion}}</i>
+                </div>
+              </div>
+              {{/each}}
+            </div>
+          </div>
+      </div>
+      {{/if}}
+    </div>
+  </body>
+</html>

@@ -6,7 +6,6 @@ module.exports = function(grunt) {
   grunt.initConfig({
 
     express: {
-      default_option: {},
       custom: {
         options: {
          port: 9001,
