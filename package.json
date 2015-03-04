@@ -7,9 +7,9 @@
     "url": "git@github.com:srbartlett/precise-theme-starter.git"
   },
   "dependencies": {
-    "handlebars": "~2.0.0",
     "coffee-script": "^1.7.1",
-    "node-markdown": "*"
+    "handlebars": "~2.0.0",
+    "marked": "^0.3.3"
   },
   "devDependencies": {
     "express": "^4.11.2",

@@ -1,25 +1,21 @@
-require "coffee-script/register"
-fs = require("fs")
-Markdown   = require("node-markdown").Markdown
-Handlebars = require("handlebars")
+require 'coffee-script/register'
 
-Handlebars.registerHelper 'md', Markdown
+fs = require 'fs'
+marked     = require 'marked'
+Handlebars = require 'handlebars'
 
-renderProfile= (profile) ->
-  render 'profile', profile
+Handlebars.registerHelper 'md', marked
 
-renderPortfolio= (portfolio) ->
-  render 'portfolio', portfolio
+renderProfile   = (profile)   -> render 'profile',   profile
+renderPortfolio = (portfolio) -> render 'portfolio', portfolio
 
 render= (name, model) ->
-  css = fs.readFileSync(__dirname + "/style.css", "utf-8")
-  template = fs.readFileSync(__dirname + "/#{name}.template", "utf-8")
-  options =
-    css: css
+  css = fs.readFileSync __dirname + "/style.css", "utf-8"
+  template = fs.readFileSync __dirname + "/#{name}.template", "utf-8"
+  options = css: css
   options[name] = model
   Handlebars.compile(template)(options)
 
 module.exports =
-  renderProfile: renderProfile
+  renderProfile:   renderProfile
   renderPortfolio: renderPortfolio
-
