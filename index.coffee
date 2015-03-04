@@ -10,8 +10,8 @@ renderProfile   = (profile)   -> render 'profile',   profile
 renderPortfolio = (portfolio) -> render 'portfolio', portfolio
 
 render= (name, model) ->
-  css = fs.readFileSync __dirname + "/style.css", "utf-8"
-  template = fs.readFileSync __dirname + "/#{name}.template", "utf-8"
+  css = fs.readFileSync "#{__dirname}/style.css", 'utf-8'
+  template = fs.readFileSync "#{__dirname}/#{name}.template", 'utf-8'
   options = css: css
   options[name] = model
   Handlebars.compile(template)(options)
