@@ -10,7 +10,7 @@
   "status": "active",
   "snapshots": [
     {
-      "url" : "http://localhost:9000/p/alexa-okeefe/yx3BxZ_vAzao876hXZCD",
+      "path" : "http://localhost:9000/p/alexa-okeefe/yx3BxZ_vAzao876hXZCD",
       "profile": {
         "about": {
           "name": "Alexa O'Keefe",
@@ -22,7 +22,7 @@
       }
     },
     {
-      "url" : "http://localhost:9000/p/jamie-brock/gi5TxvA92Nmp4Rr",
+      "path" : "http://localhost:9000/p/jamie-brock/gi5TxvA92Nmp4Rr",
       "profile": {
         "about": {
           "name": "Jamie Brock",
