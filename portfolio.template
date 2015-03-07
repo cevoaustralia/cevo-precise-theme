@@ -30,19 +30,21 @@
       {{#if portfolio.snapshots}}
         <div class="row">
           {{#each portfolio.snapshots}}
-            <div class="col-sm-6 col-md-3 text-center">
-              <div class="well text-center">
-                <div class="image-wrapper">
-                  <img src="{{this.profile.about.photo_url}}" />
+            <a href="{{this.url}}">
+              <div class="col-sm-6 col-md-3 text-center">
+                <div class="well text-center">
+                  <div class="image-wrapper">
+                    <img src="{{this.profile.about.photo_url}}" />
+                  </div>
+                  <h5>
+                    {{this.profile.about.name}}
+                    <br/>
+                    <small>{{this.profile.about.title}}</small>
+                  </h5>
+                  <i>{{this.profile.about.passion}}</i>
                 </div>
-                <h5>
-                  {{this.profile.about.name}}
-                  <br/>
-                  <small>{{this.profile.about.title}}</small>
-                </h5>
-                <i>{{this.profile.about.passion}}</i>
               </div>
-            </div>
+            </a>
           {{/each}}
         </div>
       {{/if}}
