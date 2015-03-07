@@ -12,8 +12,8 @@
     {{{css}}}
   </style>
   </head>
-  <body class="portfolio">
-    <div class="container-fluid">
+  <body>
+    <div class="container-fluid portfolio">
       <header class="row">
         <div class="col-md-offset-1 col-md-7">
           <h1>{{portfolio.name}}</h1>
