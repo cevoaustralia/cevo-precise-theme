@@ -85,11 +85,16 @@ header h2, header p {
   content: '"';
 }
 
+.image-wrapper {
+  text-align: center;
+}
+
 .image-wrapper img {
   height: 220px;
   width: 220px;
   overflow: hidden;
 }
+
 .photo {
   text-align: center;
   margin-top: 50px;
@@ -117,4 +122,3 @@ header h2, header p {
 .skills, .experiences, .education, .links {
   text-align: center;
 }
-

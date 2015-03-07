@@ -14,43 +14,37 @@
   </head>
   <body class="portfolio">
     <div class="container-fluid">
-
       <header class="row">
-        <div class="col-md-offset-1 col-md-5">
+        <div class="col-md-offset-1 col-md-7">
           <h1>{{portfolio.name}}</h1>
           <h4>{{portfolio.comment}}</h4>
         </div>
-        <div class="col-md-offset-1 col-md-5">
+        <div class="col-md-3 text-right">
           <h1>Contact</h1>
           <h4>{{portfolio.contact.name}}</h4>
           <h4>{{portfolio.contact.number}}</h4>
           <h4>{{portfolio.contact.email}}</h4>
         </div>
-
       </header>
 
       {{#if portfolio.snapshots}}
-      <div class="row">
-        <div class="col-md-offset-2 col-md-10">
-          <div class="row">
-            {{#each portfolio.snapshots}}
-              <div class="col-md-3">
-                <div>
-                  <div class="image-wrapper">
-                    <img src="{{this.profile.about.photo_url}}" />
-                  </div>
-                  <h5 class="text-center">
-                    {{this.profile.about.name}}
-                    <br/>
-                    <small>{{this.profile.about.title}}</small>
-                  </h5>
-                  <i>{{this.profile.about.passion}}</i>
+        <div class="row">
+          {{#each portfolio.snapshots}}
+            <div class="col-sm-6 col-md-3 text-center">
+              <div class="well text-center">
+                <div class="image-wrapper">
+                  <img src="{{this.profile.about.photo_url}}" />
                 </div>
+                <h5>
+                  {{this.profile.about.name}}
+                  <br/>
+                  <small>{{this.profile.about.title}}</small>
+                </h5>
+                <i>{{this.profile.about.passion}}</i>
               </div>
-              {{/each}}
             </div>
-          </div>
-      </div>
+          {{/each}}
+        </div>
       {{/if}}
     </div>
   </body>
