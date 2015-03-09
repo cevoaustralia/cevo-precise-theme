@@ -6,6 +6,12 @@ Handlebars = require 'handlebars'
 
 Handlebars.registerHelper 'md', marked
 
+Handlebars.registerHelper 'truncate', (str, len) ->
+  if str.length > len
+    new Handlebars.SafeString(str.substring(0, len-3).concat('...'))
+  else
+    str
+
 renderProfile   = (profile)   -> render 'profile',   profile
 renderPortfolio = (portfolio) -> render 'portfolio', portfolio
 

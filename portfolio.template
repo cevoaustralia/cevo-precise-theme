@@ -41,7 +41,7 @@
                     <br/>
                     <small>{{this.profile.about.title}}</small>
                   </h5>
-                  <i>{{this.profile.about.passion}}</i>
+                  <i>{{{truncate this.profile.about.passion 120}}}</i>
                 </div>
               </div>
             </a>
