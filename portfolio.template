@@ -30,7 +30,7 @@
       {{#if portfolio.snapshots}}
         <div class="row">
           {{#each portfolio.snapshots}}
-            <a href="{{this.path}}">
+            <a href="///{{domain}}{{path}}">
               <div class="col-sm-6 col-md-3 text-center">
                 <div class="well text-center">
                   <div class="image-wrapper">
