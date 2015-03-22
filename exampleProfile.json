@@ -66,18 +66,18 @@
   },
   "network": [
     {
-      "type": "github",
+      "type": "Github",
       "username": "example",
       "url": "http://github.com/example"
     },
     {
-      "type": "twitter",
+      "type": "Twitter",
       "username": "example",
       "url": "http://twitter.com/example"
     },
     {
-      "type": "email",
-      "username": "hellp",
+      "type": "Email",
+      "username": "hello",
       "url": "hello@example.com"
     }
   ]

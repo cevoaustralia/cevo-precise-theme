@@ -6,6 +6,11 @@ Handlebars = require 'handlebars'
 
 Handlebars.registerHelper 'md', marked
 
+Handlebars.registerHelper 'logo', (text) ->
+  return 'fa-github-square'   if text == 'Github'
+  return 'fa-twitter-square'  if text == 'Twitter'
+  return 'fa-envelope-square' if text == 'Email'
+
 Handlebars.registerHelper 'truncate', (str, len) ->
   if str && str.length > len
     new Handlebars.SafeString(str.substring(0, len-3).concat('...'))

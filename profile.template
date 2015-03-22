@@ -7,119 +7,94 @@
   <title>{{profile.name}}</title>
 
   <link href="https:///maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
   <style type="text/css">
     {{{css}}}
   </style>
   </head>
   <body>
-    <div class="container-fluid">
-
-      <header class="row">
-        <h2 class="name">{{profile.about.name}}</h2>
-
-        <p class="title">{{profile.about.title}}</p>
-        {{#if profile.about.passion}}
-          <p class="passion well well-sm">{{profile.about.passion}}</p>
-        {{/if}}
-      </header>
+    <div class="container">
       <div class="row">
-        <div class="col-md-offset-2 col-md-3">
+        <div class="col-md-3 sidebar">
           <div class="photo">
-            <img width="300" height="300" src="{{profile.about.photo_url}}">
+            <img width="230" height="230" src="{{profile.about.photo_url}}">
           </div>
-        </div>
-        <div class="col-md-5 bio">
-          {{#if profile.about.bio }}
-          <div class="bio">
-            <p>{{profile.about.bio}}</p>
-          </div>
-          {{/if}}
-        </div>
-      </div>
+          <h4>{{profile.about.name}}</h4>
+          <span class="title">{{profile.about.title}}</span>
+          <p class="passion">{{profile.about.passion}}</p>
 
-      <div class="row">
-        <div class="col-md-offset-2 col-md-9">
           <div class="skills">
-            <ul class="list-inline well well-sm">
+            <h3>Skills</h3>
+            <ul class="list-unstyled">
               {{#each profile.skills}}
                 <li>{{this.name}}</li>
               {{/each}}
             </ul>
           </div>
 
-          <hr>
-        </div>
-      </div>
+          <section class="links">
+            <ul class="list-inline">
+              {{#each profile.network}}
+                <li>
+                  <a href="{{this.url}}" title="{{this.type}}">
+                    <i class="fa {{logo this.type}}"></i>
+                  </a>
+                </li>
+              {{/each}}
+            </ul>
+          </section>
 
-      {{#if profile.experience}}
-      <div class="row">
-        <div class="col-md-offset-2 col-md-8">
-          <section class="experiences">
-            <h3>Selected experience</h3>
+          <small>
+            <a href="{{profile.links.pdf}}">Download Printable Version</a>
+          </small>
+        </div>
+
+        <div class="col-md-9 main-content">
+          <div class="well">
+            <div class="text-right">
+              <a class="logo" target="_blank" href="http://precise.io">
+                PRECISE
+              </a>
+            </div>
+            <p class="bio">{{profile.about.bio}}</p>
+            <h3>Job Experience</h3>
 
             {{#each profile.experience}}
               <div class="row">
-                <div class="col-md-offset-1 col-md-10">
-                  <h4><p>{{this.place}}</p></h4>
-                  <h5>{{this.role}}</h5>
-                  <p>{{this.period}}</p>
-                  <span>{{{md this.description}}}</span>
+                <div class="col-md-3 period">
+                  {{this.period}}
+                </div>
+                <div class="col-md-9">
+                  <h4>
+                    {{this.place}}
+                    <small>{{this.role}}</small>
+                  </h4>
+
+                  <p>{{{md this.description}}}</p>
                 </div>
               </div>
-
-              <hr class="divider">
             {{/each}}
-          </section>
-        </div>
-      </div>
-      {{/if}}
 
-      {{#if profile.education}}
-      <div class="row">
-        <div class="col-md-offset-2 col-md-8">
-          <section class="education">
-            <h3>Education and Training</h3>
+            <h3>Education</h3>
 
             {{#each profile.education}}
               <div class="row">
-                <div class="col-md-offset-1 col-md-10">
-                  <h4><p>{{this.place}}</p></h4>
-                  <h5>{{this.period}}</h5>
-                  <span><p>{{this.description}}</p></span>
+                <div class="col-md-3 period">
+                  {{this.period}}
+                </div>
+                <div class="col-md-9">
+                  <h4>
+                    {{this.place}}
+                  </h4>
+
+                  <p>{{{md this.description}}}</p>
                 </div>
               </div>
-
-              <hr class="divider">
             {{/each}}
-          </section>
+          </div>
         </div>
       </div>
-      {{/if}}
-
-      {{#if profile.network}}
-      <div class="row">
-        <div class="col-md-offset-2 col-md-8">
-          <section class="links">
-            <h3>Links</h3>
-
-              <div class="row">
-                <div class="col-md-offset-1 col-md-10">
-                  {{#each profile.network}}
-                    <h4><a href="{{this.url}}">{{this.type}}</a></h4>
-                  {{/each}}
-                </div>
-              </div>
-          </section>
-        </div>
-      </div>
-      {{/if}}
-
-      <p class="text-right">
-        <small>
-          <a href="{{profile.links.pdf}}">Download Printable Version</a>
-        </small>
-      </p>
     </div>
   </body>
 </html>
