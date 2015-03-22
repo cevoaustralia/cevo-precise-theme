@@ -19,11 +19,10 @@
         <h2 class="name">{{profile.about.name}}</h2>
 
         <p class="title">{{profile.about.title}}</p>
-        {{#if profile.about.passion }}
+        {{#if profile.about.passion}}
           <p class="passion well well-sm">{{profile.about.passion}}</p>
         {{/if}}
       </header>
-
       <div class="row">
         <div class="col-md-offset-2 col-md-3">
           <div class="photo">
@@ -115,6 +114,12 @@
         </div>
       </div>
       {{/if}}
+
+      <p class="text-right">
+        <small>
+          <a href="{{profile.links.pdf}}">Download Printable Version</a>
+        </small>
+      </p>
     </div>
   </body>
 </html>

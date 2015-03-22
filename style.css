@@ -122,3 +122,8 @@ header h2, header p {
 .skills, .experiences, .education, .links {
   text-align: center;
 }
+
+.links h4 {
+  display: inline-block;
+  margin-right: 10px;
+}
