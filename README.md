@@ -40,8 +40,10 @@ It's pretty simple:
 
 * `package.json`: This file describes your NPM package.  The most important fields
 and the `name` and `version`. If you have any dependencies such as a template engine
-include them in the `dependencies` field.  As with any software package you must
-bump the version on every release.
+include them in the `dependencies` field. **Note** We recommend using
+``bundledDependencies``.  This removes the need to installed dependencies from
+NPM at runtime resulting in faster install and no downtime should NPM go down.
+As with any software package you must bump the version on every release.
 
 * `index.coffee`: We're using Coffeescript. If you prefer Javascript rename
 this file to `index.js`.  This file is really important.  It's the glue between
@@ -57,9 +59,10 @@ can use from favourite templating language or stick with the one we used -- Hand
 
 * `style.css`:  All your CSS.
 
-Also worthy of a mention is the test Profile and Portfolio JSON located in
-the `./test` directory.  You can modify the JSON to suit your needs.  It's only
-used during development.
+Also worthy of a mention is the example Profile and Portfolio JSON. `exampleProfile.json`
+and `examplePortfolio.json`.  These files provide example data during development. You
+can modify to suit your needs but you must ensure they conform to the Precise
+schema.
 
 ### Images
 
@@ -80,10 +83,22 @@ You may want to include images in the theme you are developing. There are two op
 
 When you are done with **making it look good** it's time to deploy:
 
-1. Check you have updated `package.json` especially incrementing the version number.
-2. Run `npm pack`. This create a local NPM package as a tar ball.
-3. Login to [Precise](http://precise.io) and open the Manage Theme page.
-4. Upload your new NPM package.
-5. After a short pause the theme should be available to preview or select.
-6. Preview the theme to ensure all is well before making permanent.
-7. Rinse and repeat as required.
+1. Bump the version in your package.json file.
+2. Stage the package.json change.
+3. Commit that change with a message like "release 0.1.5"
+4. Git tag ```git tag -a 0.1.5 -m 'release 0.1.5'```
+4. Push the change to git
+5. Package into tarball using
+
+    $ npm pack
+
+Once packaged:
+
+1. Login to [Precise](http://precise.io)
+2. Open the theme page /theme
+3. Upload your new release from your local machine.
+4. After a short pause the theme should be available to preview or select.
+5. Preview the theme to ensure all is well before making permanent.
+6. Rinse and repeat as required.
+
+
