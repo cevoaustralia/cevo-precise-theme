@@ -93,15 +93,13 @@ h4 small {
 }
 
 h3 {
-  text-align: left;
   padding-bottom: 10px;
   border-bottom: 1px solid #eee;
 }
 
 .skills ul {
-  text-align: left;
+  text-align: center;
   color: white;
-  margin-left: 10px;
 }
 
 .logo {
