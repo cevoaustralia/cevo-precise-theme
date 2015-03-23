@@ -33,21 +33,23 @@
             </ul>
           </div>
 
-          <section class="links">
-            <ul class="list-inline">
-              {{#each profile.network}}
-                <li>
-                  <a href="{{this.url}}" title="{{this.type}}">
-                    <i class="fa {{logo this.type}}"></i>
-                  </a>
-                </li>
-              {{/each}}
-            </ul>
-          </section>
+          <footer class="sidebar-footer">
+            <section class="links">
+              <ul class="list-inline">
+                {{#each profile.network}}
+                  <li>
+                    <a href="{{this.url}}" title="{{this.type}}">
+                      <i class="fa {{logo this.type}}"></i>
+                    </a>
+                  </li>
+                {{/each}}
+              </ul>
+            </section>
 
-          <small>
-            <a href="{{profile.links.pdf}}">Download Printable Version</a>
-          </small>
+            <small>
+              <a href="{{profile.links.pdf}}">Download Printable Version</a>
+            </small>
+          </footer>
         </div>
 
         <div class="col-md-9 main-content">

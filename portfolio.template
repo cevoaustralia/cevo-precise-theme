@@ -16,11 +16,11 @@
     <div class="container portfolio">
       <header class="row">
         <div class="well">
-          <div class="col-md-offset-1 col-md-6">
+          <div class="col-md-6">
             <h3>{{portfolio.name}}</h3>
             <p>{{portfolio.comment}}</p>
           </div>
-          <div class="col-md-offset-1 col-md-3">
+          <div class="col-md-offset-2 col-md-3">
             <h3>Contact</h3>
             <p>
               {{portfolio.contact.name}}
@@ -36,7 +36,7 @@
       <div class="row">
         {{#each portfolio.snapshots}}
           <a href="///{{domain}}{{path}}">
-            <div class="col-sm-6 col-md-3 text-center">
+            <div class="col-sm-6 col-md-3 text-center profile">
               <div class="text-center">
                 <div class="photo">
                   <img width="230" height="230" src="{{this.profile.about.photo_url}}">
