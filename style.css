@@ -16,6 +16,20 @@ body {
   box-shadow: 5px 5px 10px #ccc;
 }
 
+@media (max-width: 768px) {
+  body, .container .sidebar {
+    padding-bottom: 0;
+  }
+  .container {
+    margin: 0 auto;
+  }
+
+  .container .sidebar footer {
+    position: relative;
+    margin-left: 0;
+  }
+}
+
 .sidebar {
   text-align: center;
   padding-bottom: 205px;

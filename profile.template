@@ -16,7 +16,7 @@
   <body>
     <div class="container">
       <div class="row">
-        <div class="col-md-3 sidebar">
+        <div class="col-md-3 col-xs-12 sidebar">
           <div class="photo">
             <img width="230" height="230" src="{{profile.about.photo_url}}">
           </div>
@@ -52,7 +52,7 @@
           </footer>
         </div>
 
-        <div class="col-md-9 main-content">
+        <div class="col-md-9 col-xs-12 main-content">
           <div class="well">
             <div class="text-right">
               <a class="logo" target="_blank" href="http://precise.io">
