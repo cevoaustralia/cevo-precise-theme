@@ -17,9 +17,13 @@ body {
 }
 
 .sidebar {
-  background-color: #6fa8dc;
   text-align: center;
   padding-bottom: 150px;
+}
+
+header, .sidebar {
+  background-color: #6fa8dc;
+  color: white;
 }
 
 .sidebar a {
@@ -31,7 +35,7 @@ body {
   color: white;
 }
 
-.sidebar h3 {
+header h3, .sidebar h3 {
   border-bottom: none;
 }
 
@@ -100,32 +104,12 @@ h3 {
   color: #333;
 }
 
-/*h5 {
-  font-size: 18px;
-  font-weight: 300;
-}
-
-h4 p, h5 {
-  text-transform: none;
-  color: #333;
-  font-weight: 400;
-}
-
 header {
-  background: #00b2e2;
-  border-bottom: 1px solid #ccc;
-  text-align: center;
-  height: 230px;
-  padding-top: 15px;
-  color: white;
-}*/
-
-.portfolio header {
-  text-align: left;
-  margin-bottom: 50px;
+  min-height: 200px;
 }
-header h2, header p {
-  color: white;
+
+a, a:hover {
+  color: inherit;
 }
 
 .well {
@@ -138,13 +122,3 @@ header h2, header p {
   border: 0;
   box-shadow: none;
 }
-
-/*.image-wrapper {
-  text-align: center;
-}
-
-.image-wrapper img {
-  height: 220px;
-  width: 220px;
-  overflow: hidden;
-}*/

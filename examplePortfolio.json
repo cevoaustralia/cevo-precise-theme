@@ -10,8 +10,8 @@
   "status": "active",
   "snapshots": [
     {
-      "domain": "localhost:9000",
-      "path" : "/p/alexa-okeefe/yx3BxZ_vAzao876hXZCD",
+      "domain": "localhost:9001",
+      "path" : "/profile",
       "profile": {
         "about": {
           "name": "Alexa O'Keefe",
@@ -23,8 +23,8 @@
       }
     },
     {
-      "domain": "localhost:9000",
-      "path" : "p/jamie-brock/gi5TxvA92Nmp4Rr",
+      "domain": "localhost:9001",
+      "path" : "/profile",
       "profile": {
         "about": {
           "name": "Jamie Brock",
