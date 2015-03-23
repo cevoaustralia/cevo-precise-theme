@@ -13,7 +13,7 @@
     </style>
   </head>
   <body>
-    <div class="container portfolio">
+    <div class="container-fluid portfolio">
       <header class="row">
         <div class="well">
           <div class="col-md-6 col-xs-12">
