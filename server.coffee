@@ -17,6 +17,9 @@ app.get '/profile', (req, res) ->
     else
       console.log err
 
+app.get '/profile/empty', (req, res) ->
+  res.send index.renderProfile({})
+
 app.get '/portfolio', (req, res) ->
 
   fs.readFile testPortfolio, {encoding: 'utf-8'}, (err, portfolio) ->
@@ -24,5 +27,8 @@ app.get '/portfolio', (req, res) ->
       res.send index.renderPortfolio(JSON.parse(portfolio))
     else
       console.log err
+
+app.get '/portfolio/empty', (req, res) ->
+  res.send index.renderPortfolio({})
 
 module.exports = app
