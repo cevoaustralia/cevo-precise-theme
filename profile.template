@@ -46,9 +46,11 @@
               </ul>
             </section>
 
+            {{#if profile.links.pdf}}
             <small>
               <a href="{{profile.links.pdf}}">Download Printable Version</a>
             </small>
+            {{/if}}
           </footer>
         </div>
 
