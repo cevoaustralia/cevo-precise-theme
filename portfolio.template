@@ -35,7 +35,7 @@
 
       <div class="row">
         {{#each portfolio.snapshots}}
-          <a href="///{{domain}}{{path}}">
+          <a href="http://{{domain}}{{path}}">
             <div class="col-sm-12 col-md-3 text-center profile">
               <div class="text-center">
                 <div class="photo">
