@@ -29,11 +29,22 @@ module.exports = function(grunt) {
         npm: false
       }
     },
+
+    less: {
+     development: {
+        options: {
+          paths: ['assets/less']
+        },
+        files: {
+          'assets/css/styles.css': 'assets/less/styles.less'
+        }
+      }
+    }
   });
 
   grunt.loadNpmTasks('grunt-express');
   grunt.loadNpmTasks('grunt-release');
-
+  grunt.loadNpmTasks('grunt-contrib-less');
   // Default task.
   grunt.registerTask('default', ['express', 'express-keepalive']);
 

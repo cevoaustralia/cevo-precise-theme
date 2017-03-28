@@ -1,114 +1,186 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+<head>
     <title>{{profile.name}}</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Precise Profile for {{profile.name}}">
+    <meta name="author" content="Precise.io">
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="https://static.precise.io/precise-theme-starter/assets/plugins/bootstrap/css/bootstrap.min.css">
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="https://static.precise.io/precise-theme-starter/assets/plugins/font-awesome/css/font-awesome.css">
 
-    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="https://static.precise.io/precise-theme-starter/assets/css/styles.css">
+    <!--<link id="theme-style" rel="stylesheet" href="./assets/css/styles.css">-->
 
-    <style type="text/css">
-      {{{css}}}
-    </style>
-
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
-      <script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv-printshiv.min.js"></script>
-      <script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
-
-      <link href="//netdna.bootstrapcdn.com/respond-proxy.html" id="respond-proxy" rel="respond-proxy">
-      <link href="/respond.proxy.gif" id="respond-redirect" rel="respond-redirect">
-      <script type='text/javascript' src="/respond.proxy.js"></script>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-  </head>
-  <body>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-3 col-xs-12 sidebar">
-          <div class="photo">
-            <img width="230" height="230" src="{{profile.about.photo_url}}">
-          </div>
-          <h4>{{profile.about.name}}</h4>
-          <span class="title">{{profile.about.title}}</span>
-          <p class="passion">{{profile.about.passion}}</p>
 
-          <div class="skills">
-            <h3>Skills</h3>
-            <ul class="list-unstyled">
-              {{#each profile.skills}}
-                <li>{{this.name}}</li>
-              {{/each}}
-            </ul>
-          </div>
+</head>
 
-          <footer class="sidebar-footer">
-            <section class="links">
-              <ul class="list-inline">
-                {{#each profile.network}}
-                  <li>
-                    <a href="{{this.url}}" title="{{this.type}}">
-                      <i class="fa {{logo this.type}}"></i>
-                    </a>
-                  </li>
-                {{/each}}
-              </ul>
-            </section>
+<body>
+    <!-- ******HEADER****** -->
+    <header class="header">
+        <div class="container">
+          <img class="profile-image img-responsive pull-left img-circle" width="180" src="{{profile.about.photo_url}}" alt="{{profile.about.name}}" />
+            <div class="profile-content pull-left">
+              <h1 class="name">{{profile.about.name}}</h1>
+              <h2 class="desc">{{profile.about.title}}</h2>
+                <ul class="social list-inline">
+                  {{#each profile.network}}
+                    <li>
+                      <a href="{{this.url}}" title="{{this.type}}">
+                        <i class="fa {{logo this.type}}"></i>
+                      </a>
+                    </li>
+                  {{/each}}
+                </ul>
+            </div><!--//profile-->
 
             {{#if profile.links.pdf}}
             <small>
-              <a href="{{profile.links.pdf}}">Download Printable Version</a>
+              <a class="btn btn-cta-primary pull-right" href="{{profile.links.pdf}}"><i class="fa fa-download"></i> Download</a>
             </small>
             {{/if}}
-          </footer>
+        </div><!--//container-->
+    </header><!--//header-->
+
+    <div class="container sections-wrapper">
+        <div class="row">
+            <div class="primary col-md-8 col-sm-12 col-xs-12">
+                <section class="about section">
+                    <div class="section-inner">
+                        <h2 class="heading">About Me</h2>
+                        <div class="content">
+                            <p>{{profile.about.bio}}</p>
+                        </div><!--//content-->
+                    </div><!--//section-inner-->
+                </section><!--//section-->
+
+               {{#if (latestProjects profile)}}
+               <section class="latest section">
+                    <div class="section-inner">
+                        <h2 class="heading">Latest Projects</h2>
+                        <div class="content">
+                          {{#each (latestProjects profile)}}
+                            <div class="item row">
+                              <a class="col-md-4 col-sm-4 col-xs-12" href="{{this.url}}" target="_blank">
+                                <img class="img-responsive project-image" width="115" src="{{this.coverImage}}"/>
+                                </a>
+                                <div class="desc col-md-8 col-sm-8 col-xs-12">
+                                  <h3 class="title">{{this.title}}</a></h3>
+                                    {{{md this.description}}}
+                                </div><!--//desc-->
+                            </div><!--//item-->
+                          {{/each}}
+                        </div><!--//content-->
+                    </div><!--//section-inner-->
+                </section><!--//section-->
+                {{/if}}
+                <section class="experience section">
+                    <div class="section-inner">
+                        <h2 class="heading">Experience</h2>
+                        <div class="content">
+                            {{#each profile.experience}}
+                              <div class="item">
+                                <h3 class="title">{{this.role}} - <span class="place">{{this.place}}</span> <span class="year">{{this.period}}</span></h3>
+                                <p>{{{md this.description}}}</p>
+                              </div><!--//item-->
+                            {{/each}}
+                        </div><!--//content-->
+                    </div><!--//section-inner-->
+                </section><!--//section-->
+            </div><!--//primary-->
+            <div class="secondary col-md-4 col-sm-12 col-xs-12">
+                 <aside class="info aside section">
+                    <div class="section-inner">
+                        <h2 class="heading sr-only">Passion</h2>
+                        <div class="content">
+                            <p class="intro">
+                              {{profile.about.passion}}
+                            </p>
+                        </div><!--//content-->
+                    </div><!--//section-inner-->
+                </aside><!--//aside-->
+
+                <aside class="skills aside section">
+                    <div class="section-inner">
+                        <h2 class="heading">Skills</h2>
+                        <div class="content">
+                            <div class="skillset">
+                                {{#each profile.skills}}
+                                  <div class="item">
+                                    <h3 class="level-title">{{this.name}}
+                                      <span class="level-label" data-toggle="tooltip" data-placement="left" data-animation="true" title="{{this.comment}}">{{skillLevelAsText this.level}}</span></h3>
+                                      <div class="level-bar">
+                                        <div class="level-bar-inner" data-level="{{skillLevelAsPercentage this.level}}">
+                                          </div>
+                                      </div><!--//level-bar-->
+                                  </div><!--//item-->
+                                {{/each}}
+                            </div>
+                        </div><!--//content-->
+                    </div><!--//section-inner-->
+                </aside><!--//section-->
+
+                <aside class="education aside section">
+                    <div class="section-inner">
+                        <h2 class="heading">Education</h2>
+                        <div class="content">
+                            {{#each profile.education}}
+                              <div class="item">
+                                <h3 class="title"><i class="fa fa-graduation-cap"></i> {{this.description}} </h3>
+                                <h4 class="university">{{this.place}} <span class="year">{{this.period}}</span></h4>
+                              </div><!--//item-->
+                            {{/each}}
+                        </div><!--//content-->
+                    </div><!--//section-inner-->
+                </aside><!--//section-->
+
+                <aside class="list conferences aside section">
+                    <div class="section-inner">
+                        <h2 class="heading">Conferences</h2>
+                        <div class="content">
+                            <ul class="list-unstyled">
+                                {{#each profile.conferences}}
+                                <li><i class="fa fa-calendar"></i> {{{md this.title}}} ({{this.place}})</li>
+                                {{/each}}
+                            </ul>
+                        </div><!--//content-->
+                    </div><!--//section-inner-->
+                </aside><!--//section-->
+            </div><!--//secondary-->
+        </div><!--//row-->
+    </div><!--//masonry-->
+
+    <!-- ******FOOTER****** -->
+    <footer class="footer">
+        <div class="container text-center">
+                <small class="copyright">Made with <a href="https://precise.io" target="_blank">Precise</a></small>
         </div>
+    </footer>
 
-        <div class="col-md-9 col-xs-12 main-content">
-          <div class="well">
-            <div class="text-right">
-              <a class="logo" target="_blank" href="http://precise.io">
-                PRECISE
-              </a>
-            </div>
-            <p class="bio">{{profile.about.bio}}</p>
-            <h3>Job Experience</h3>
+    <!-- Javascript -->
+    <script type="text/javascript" src="https://static.precise.io/precise-theme-starter/assets/plugins/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="https://static.precise.io/precise-theme-starter/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
 
-            {{#each profile.experience}}
-              <div class="row">
-                <div class="col-md-3 period">
-                  {{this.period}}
-                </div>
-                <div class="col-md-9">
-                  <h4>
-                    {{this.place}}
-                    <small>{{this.role}}</small>
-                  </h4>
+    <!-- custom js -->
+    <!--<script type="text/javascript" src="https://static.precise.io/precise-theme-starter/assets/js/main.js"></script>-->
 
-                  <p>{{{md this.description}}}</p>
-                </div>
-              </div>
-            {{/each}}
-
-            <h3>Education</h3>
-
-            {{#each profile.education}}
-              <div class="row">
-                <div class="col-md-3 period">
-                  {{this.period}}
-                </div>
-                <div class="col-md-9">
-                  <h4>
-                    {{this.place}}
-                  </h4>
-
-                  <p>{{{md this.description}}}</p>
-                </div>
-              </div>
-            {{/each}}
-          </div>
-        </div>
-      </div>
-    </div>
-  </body>
+    <script type="text/javascript">
+      {{{js}}}
+    </script>
+</body>
 </html>
+

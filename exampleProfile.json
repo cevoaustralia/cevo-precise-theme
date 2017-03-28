@@ -8,25 +8,32 @@
   },
   "skills": [
     {
-      "name": "Branding"
+      "name": "Branding",
+      "level": 3
     },
     {
-      "name": "Style Guides"
+      "name": "Style Guides",
+      "level": 5
     },
     {
-      "name": "Responsive Design"
+      "name": "Responsive Design",
+      "level": 5
     },
     {
-      "name": "Wireframes"
+      "name": "Wireframes",
+      "level": 4
     },
     {
-      "name": "Product Design"
+      "name": "Product Design",
+      "level": 2
     },
     {
-      "name": "Workshops"
+      "name": "Workshops",
+      "level": 2
     },
     {
-      "name": "Go to Market"
+      "name": "Go to Market",
+      "level": 1
     }
   ],
   "experience": [
@@ -34,19 +41,43 @@
       "place": "Qantas",
       "period": "Oct 2014 - Current",
       "description": "Omnis et voluptatum odio quasi. *Aut id nostrum corrupti eius*. Vel esse ea. Hic placeat eum quos accusamus. Ea nemo consectetur animi laboriosam totam.",
-      "role": "Senior UX Designer"
+      "role": "Senior UX Designer",
+      "projects": [
+        {
+        "title": "Qantas app for Apple Watch",
+        "period": "",
+        "description": "Qantas for Apple Watch is a great example of how we are making flying even easier for our customers. Nam id quibusdam qui consequatur eveniet. Sunt ut illum optio commodi dolor. Hic placeat eum quos accusamus. Ea nemo consectetur animi laboriosam totam.",
+        "coverImage": "http://www.qantas.com/img/150x150/apple-watch-flight.png"
+        }
+      ]
     },
     {
       "place": "Woolworths",
       "period": "Jul 2014 -  Oct 2014",
       "description": "Voluptatem accusantium voluptatem voluptatibus dolorum voluptatem quos error. Nam id quibusdam qui consequatur eveniet. Sunt ut illum optio commodi dolor.",
-      "role": "Visual Designer"
+      "role": "Visual Designer",
+      "projects": [
+        {
+        "title": "Woolworths Fuel app",
+        "period": "",
+        "description": "Designer for Woolworths app to check and compare fuel prices at multiple Caltex Woolworths outlets in an instant",
+        "coverImage": "http://www.techguide.com.au/wp-content/uploads/wooliesappthumb.jpg"
+        }
+      ]
     },
     {
       "place": "Telstra",
       "period": "Jan 2014 -  Jun 2014",
       "description": "Et aut voluptate earum omnis similique. Cumque necessitatibus facere reprehenderit nobis. Praesentium est nobis aut voluptatem dolorem quasi. Perferendis rerum architecto dolor minus cupiditate.",
-      "role": "UX Consultant"
+      "role": "UX Consultant",
+      "projects": [
+        {
+        "title": "Telstra 24x7",
+        "period": "",
+        "description": "The most popular Telstra app. Nam id quibusdam qui consequatur eveniet. Sunt ut illum optio commodi dolor.",
+        "coverImage": "https://www.my.telstra.com.au/myaccount/static-content/images/mobile-dashboard.png"
+        }
+      ]
     }
   ],
   "education": [
@@ -79,6 +110,12 @@
       "type": "Email",
       "username": "hello",
       "url": "hello@example.com"
+    }
+  ],
+  "conferences": [
+    {
+      "title": "UX Australia 2016",
+      "place": "Melbourne"
     }
   ]
 }
