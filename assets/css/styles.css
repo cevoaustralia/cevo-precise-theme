@@ -187,6 +187,12 @@ iframe {
   font-size: 14px;
 }
 /* About Section */
+.snapshots .photo {
+  margin: 0 auto;
+}
+.snapshots p {
+  color: #434343;
+}
 /* Latest Section */
 .latest .item {
   margin-bottom: 30px;

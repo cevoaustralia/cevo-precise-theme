@@ -107,7 +107,6 @@ iframe {
     background: @hero-background;
     border-top: 10px solid @brand-color;
     .btn {
-        margin-top: 60px;
         font-weight: bold;
     }
     .profile-image {
@@ -176,11 +175,33 @@ iframe {
             }
         }
     }
+
 }
+
+.logo {
+  height: 100px;
+  margin-top: -31px;
+  background-repeat: no-repeat;
+
+  &.right {
+    background-position: right bottom;
+  }
+}
+
 
 /* About Section */
 .about {
 
+}
+
+.snapshots {
+  .photo {
+     margin: 0 auto;
+  }
+
+  p {
+    color: @text-color;
+  }
 }
 
 /* Latest Section */
