@@ -1,12 +1,3 @@
-/*   
- * Template Name: Developer - Responsive Website Template for Developers
- * Version: 1.5
- * Author: Xiaoying Riley
- * Twitter: @3rdwave_themes
- * License: Creative Commons Attribution 3.0 License
- * Website: http://themes.3rdwavemedia.com/
-*/
-/* ======= Base ======= */
 body {
   font-family: 'Lato', arial, sans-serif;
   color: #434343;
@@ -101,27 +92,12 @@ a.dotted-link:hover {
   text-decoration: none;
   color: #49515a;
 }
-/*
-iframe {
-
-    .header {
-        padding: 0;
-    }
-}
-
-.iframe-wrapper {
-    overflow: auto;
-    -webkit-overflow-scrolling:touch;
-}
-*/
-/* ======= Header ======= */
 .header {
   padding: 30px 0;
   background: #fff;
   border-top: 10px solid #ff4545;
 }
 .header .btn {
-  margin-top: 60px;
   font-weight: bold;
 }
 .header .profile-image {
@@ -164,7 +140,6 @@ iframe {
   font-size: 20px;
   padding-top: 8px;
 }
-/* ======= Sections======= */
 .sections-wrapper {
   padding-top: 60px;
   padding-bottom: 60px;
@@ -186,14 +161,19 @@ iframe {
   margin-right: 5px;
   font-size: 14px;
 }
-/* About Section */
+.logo {
+  height: 100px;
+  background-repeat: no-repeat;
+}
+.logo.right {
+  background-position: right bottom;
+}
 .snapshots .photo {
   margin: 0 auto;
 }
 .snapshots p {
   color: #434343;
 }
-/* Latest Section */
 .latest .item {
   margin-bottom: 30px;
 }
@@ -284,7 +264,6 @@ iframe {
 .latest .featured-image .ribbon .text:after {
   right: 0;
 }
-/* Projects Section */
 .projects .item {
   margin-bottom: 30px;
 }
@@ -300,7 +279,6 @@ iframe {
 .projects .item .title a:hover {
   color: #5f6b77;
 }
-/* Work Section */
 .experience .item {
   margin-bottom: 30px;
 }
@@ -327,25 +305,6 @@ iframe {
 .conferences li p {
   display: inline;
 }
-/* Git section */
-.github-graph {
-  margin-bottom: 30px;
-}
-.github-graph .js-calendar-graph-svg {
-  max-width: 100%;
-}
-.ghfeed {
-  height: 600px;
-}
-.ghfeed,
-.ghfeed *,
-.ghfeed *:before,
-.ghfeed *:after {
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-}
-/* Info Section */
 .info .fa {
   margin-right: 15px;
   color: #ccd1d6;
@@ -362,7 +321,6 @@ iframe {
 .info li:last-child {
   margin-bottom: 0;
 }
-/* Skills Section */
 .skills .intro {
   margin-bottom: 30px;
 }
@@ -392,36 +350,6 @@ iframe {
   height: 15px;
   background: #ffa9a9;
 }
-/* Testimonials section */
-.testimonials .item {
-  margin-bottom: 30px;
-}
-.testimonials .item:last-child {
-  margin-bottom: 0;
-}
-.testimonials .item .quote {
-  color: #666;
-  font-size: 16px;
-  border-left-color: #fff5f5;
-  margin-bottom: 15px;
-}
-.testimonials .item .quote .fa {
-  color: #ffc2c2;
-  margin-right: 15px;
-}
-.testimonials .item .source {
-  font-size: 14px;
-  padding-left: 30px;
-  font-weight: 500;
-}
-.testimonials .item .source .name {
-  color: #939ea9;
-  font-weight: 600;
-}
-.testimonials .item .source .title {
-  color: #999;
-}
-/* Education section */
 .education .item {
   margin-bottom: 30px;
 }
@@ -443,40 +371,6 @@ iframe {
   color: #b0b7bf;
   font-weight: 500;
 }
-/* Language Section */
-.languages .item {
-  margin-bottom: 15px;
-}
-.languages .item .title {
-  color: #778492;
-}
-.languages .item .level {
-  color: #999;
-}
-.languages .item:last-child {
-  margin-bottom: 0;
-}
-.languages .item .fa {
-  color: #ffc2c2;
-}
-/* Blog Section */
-.blog .item {
-  margin-bottom: 30px;
-}
-.blog .item .title {
-  font-size: 18px;
-  line-height: 1.3;
-}
-.blog .item .title a {
-  color: #778492;
-}
-.blog .item .title a:hover {
-  color: #5f6b77;
-}
-.blog .item:last-child {
-  margin-bottom: 0;
-}
-/* List section */
 .list ul li {
   margin-bottom: 10px;
 }
@@ -489,23 +383,6 @@ iframe {
 .list ul li a:hover {
   color: #49515a;
 }
-/* Credits */
-.credits ul li {
-  margin-bottom: 10px;
-}
-.credits ul li .fa {
-  margin-right: 5px;
-}
-.credits ul li a {
-  color: #778492;
-}
-.credits ul li a:hover {
-  color: #49515a;
-}
-.credits .btn {
-  margin-bottom: 15px;
-}
-/* ======= Footer ======= */
 .footer {
   background: #32383e;
   color: #fff;
@@ -518,9 +395,6 @@ iframe {
 }
 .footer a {
   color: #fff;
-}
-.footer .fa-heart {
-  color: #fb866a;
 }
 /* Extra small devices (phones, less than 768px) */
 @media (max-width: 767px) {

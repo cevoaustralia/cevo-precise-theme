@@ -4,22 +4,22 @@
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
 <head>
     <title>{{profile.name}}</title>
-    <!-- Meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Precise Profile for {{profile.name}}">
-    <meta name="author" content="Precise.io">
+    <meta name="author" content="precise.io">
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-    <!-- Global CSS -->
+
+    <!-- TODO: replace these with CDN -->
     <link rel="stylesheet" href="https://static.precise.io/precise-theme-starter/assets/plugins/bootstrap/css/bootstrap.min.css">
-    <!-- Plugins CSS -->
     <link rel="stylesheet" href="https://static.precise.io/precise-theme-starter/assets/plugins/font-awesome/css/font-awesome.css">
 
-    <!-- Theme CSS -->
-    <link id="theme-style" rel="stylesheet" href="https://static.precise.io/precise-theme-starter/assets/css/styles.css">
-    <!--<link id="theme-style" rel="stylesheet" href="./assets/css/styles.css">-->
+    <!-- Theme -->
+    <style type="text/css">
+      {{{css}}}
+    </style>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -30,7 +30,6 @@
 </head>
 
 <body>
-    <!-- ******HEADER****** -->
     <header class="header">
         <div class="container">
           <img class="profile-image img-responsive pull-left img-circle" width="180" src="{{profile.about.photo_url}}" alt="{{profile.about.name}}" />
@@ -49,23 +48,23 @@
                 {{#if profile.links.pdf}}
                   <a class="btn btn-cta-primary" href="{{profile.links.pdf}}"><i class="fa fa-download"></i> Download</a>
                 {{/if}}
-            </div><!--//profile-->
+            </div>
 
             <div class="logo right"></div>
-        </div><!--//container-->
-    </header><!--//header-->
+        </div>
+    </header>
 
     <div class="container sections-wrapper">
         <div class="row">
             <div class="primary col-md-8 col-sm-12 col-xs-12">
                 <section class="about section">
                     <div class="section-inner">
-                        <h2 class="heading">About Me</h2>
+                        <h2 class="heading">Bio</h2>
                         <div class="content">
                             <p>{{profile.about.bio}}</p>
-                        </div><!--//content-->
-                    </div><!--//section-inner-->
-                </section><!--//section-->
+                        </div>
+                    </div>
+                </section>
 
                {{#if (latestProjects profile)}}
                <section class="latest section">
@@ -75,17 +74,19 @@
                           {{#each (latestProjects profile)}}
                             <div class="item row">
                               <a class="col-md-4 col-sm-4 col-xs-12" href="{{this.url}}" target="_blank">
-                                <img class="img-responsive project-image" width="115" src="{{this.coverImage}}"/>
+                                {{#if this.coverImage}}
+                                  <img class="img-responsive project-image" width="115" src="{{this.coverImage}}"/>
+                                {{/if}}
                                 </a>
                                 <div class="desc col-md-8 col-sm-8 col-xs-12">
                                   <h3 class="title">{{this.title}}</a></h3>
                                     {{{md this.description}}}
-                                </div><!--//desc-->
-                            </div><!--//item-->
+                                </div>
+                            </div>
                           {{/each}}
-                        </div><!--//content-->
-                    </div><!--//section-inner-->
-                </section><!--//section-->
+                        </div>
+                    </div>
+                </section>
                 {{/if}}
                 <section class="experience section">
                     <div class="section-inner">
@@ -95,12 +96,12 @@
                               <div class="item">
                                 <h3 class="title">{{this.role}} - <span class="place">{{this.place}}</span> <span class="year">{{this.period}}</span></h3>
                                 <p>{{{md this.description}}}</p>
-                              </div><!--//item-->
+                              </div>
                             {{/each}}
-                        </div><!--//content-->
-                    </div><!--//section-inner-->
-                </section><!--//section-->
-            </div><!--//primary-->
+                        </div>
+                    </div>
+                </section>
+            </div>
             <div class="secondary col-md-4 col-sm-12 col-xs-12">
                  <aside class="info aside section">
                     <div class="section-inner">
@@ -109,9 +110,9 @@
                             <p class="intro">
                               {{profile.about.passion}}
                             </p>
-                        </div><!--//content-->
-                    </div><!--//section-inner-->
-                </aside><!--//aside-->
+                        </div>
+                    </div>
+                </aside>
 
                 <aside class="skills aside section">
                     <div class="section-inner">
@@ -125,14 +126,15 @@
                                       <div class="level-bar">
                                         <div class="level-bar-inner" data-level="{{skillLevelAsPercentage this.level}}">
                                           </div>
-                                      </div><!--//level-bar-->
-                                  </div><!--//item-->
+                                      </div>
+                                  </div>
                                 {{/each}}
                             </div>
-                        </div><!--//content-->
-                    </div><!--//section-inner-->
-                </aside><!--//section-->
+                        </div>
+                    </div>
+                </aside>
 
+                {{#if profile.education}}
                 <aside class="education aside section">
                     <div class="section-inner">
                         <h2 class="heading">Education</h2>
@@ -141,12 +143,14 @@
                               <div class="item">
                                 <h3 class="title"><i class="fa fa-graduation-cap"></i> {{this.description}} </h3>
                                 <h4 class="university">{{this.place}} <span class="year">{{this.period}}</span></h4>
-                              </div><!--//item-->
+                              </div>
                             {{/each}}
-                        </div><!--//content-->
-                    </div><!--//section-inner-->
-                </aside><!--//section-->
+                        </div>
+                    </div>
+                </aside>
+                {{/if}}
 
+                {{#if profile.conferences}}
                 <aside class="list conferences aside section">
                     <div class="section-inner">
                         <h2 class="heading">Conferences</h2>
@@ -156,14 +160,14 @@
                                 <li><i class="fa fa-calendar"></i> {{{md this.title}}} ({{this.place}})</li>
                                 {{/each}}
                             </ul>
-                        </div><!--//content-->
-                    </div><!--//section-inner-->
-                </aside><!--//section-->
-            </div><!--//secondary-->
-        </div><!--//row-->
-    </div><!--//masonry-->
+                        </div>
+                    </div>
+                </aside>
+                {{/if}}
+            </div>
+        </div>
+    </div>
 
-    <!-- ******FOOTER****** -->
     <footer class="footer">
         <div class="container text-center">
                 <small class="copyright">Made with <a href="https://precise.io" target="_blank">Precise</a></small>
@@ -173,9 +177,6 @@
     <!-- Javascript -->
     <script type="text/javascript" src="https://static.precise.io/precise-theme-starter/assets/plugins/jquery-1.11.3.min.js"></script>
     <script type="text/javascript" src="https://static.precise.io/precise-theme-starter/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
-
-    <!-- custom js -->
-    <!--<script type="text/javascript" src="https://static.precise.io/precise-theme-starter/assets/js/main.js"></script>-->
 
     <script type="text/javascript">
       {{{js}}}

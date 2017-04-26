@@ -42,8 +42,12 @@ renderPortfolio = (portfolio) -> render 'portfolio', portfolio
 
 render= (name, model) ->
   js = fs.readFileSync "#{__dirname}/assets/js/main.js", 'utf-8'
+  css = fs.readFileSync "#{__dirname}/assets/css/styles.css", 'utf-8'
   template = fs.readFileSync "#{__dirname}/#{name}.template", 'utf-8'
-  options = js: js
+  options =
+    js: js
+    css: css
+
   options[name] = model
   Handlebars.compile(template)(options)
 
