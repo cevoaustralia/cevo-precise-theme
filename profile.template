@@ -103,6 +103,7 @@
                 </section>
             </div>
             <div class="secondary col-md-4 col-sm-12 col-xs-12">
+               {{#if profile.about.passion}}
                  <aside class="info aside section">
                     <div class="section-inner">
                         <h2 class="heading sr-only">Passion</h2>
@@ -113,6 +114,7 @@
                         </div>
                     </div>
                 </aside>
+                {{/if}}
 
                 <aside class="skills aside section">
                     <div class="section-inner">
