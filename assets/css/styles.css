@@ -165,9 +165,6 @@ a.dotted-link:hover {
   height: 100px;
   background-repeat: no-repeat;
 }
-.logo.right {
-  background-position: right bottom;
-}
 .snapshots .photo {
   margin: 0 auto;
 }

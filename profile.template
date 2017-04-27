@@ -33,6 +33,7 @@
     <header class="header">
         <div class="container">
           <img class="profile-image img-responsive pull-left img-circle" width="180" src="{{profile.about.photo_url}}" alt="{{profile.about.name}}" />
+            <div class="logo img-responsive pull-right"></div>
             <div class="profile-content pull-left">
               <h1 class="name">{{profile.about.name}}</h1>
               <h2 class="desc">{{profile.about.title}}</h2>
@@ -49,8 +50,6 @@
                   <a class="btn btn-cta-primary" href="{{profile.links.pdf}}"><i class="fa fa-download"></i> Download</a>
                 {{/if}}
             </div>
-
-            <div class="logo right"></div>
         </div>
     </header>
 
