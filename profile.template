@@ -60,7 +60,7 @@
                     <div class="section-inner">
                         <h2 class="heading">Bio</h2>
                         <div class="content">
-                            <p>{{profile.about.bio}}</p>
+                          <p>{{{md profile.about.bio}}}</p>
                         </div>
                     </div>
                 </section>
@@ -108,7 +108,7 @@
                         <h2 class="heading sr-only">Passion</h2>
                         <div class="content">
                             <p class="intro">
-                              {{profile.about.passion}}
+                            {{{md profile.about.passion}}}
                             </p>
                         </div>
                     </div>
