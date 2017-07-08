@@ -72,15 +72,17 @@
                         <div class="content">
                           {{#each (latestProjects profile)}}
                             <div class="item row">
-                              <a class="col-md-4 col-sm-4 col-xs-12" href="{{this.url}}" target="_blank">
+                              <div class="col-md-4 col-sm-4 col-xs-12">
                                 {{#if this.coverImage}}
-                                  <img class="img-responsive project-image" width="115" src="{{this.coverImage}}"/>
+                                  <a href="{{this.url}}" target="_blank">
+                                    <img class="img-responsive project-image" width="115" src="{{this.coverImage}}"/>
+                                  </a>
                                 {{/if}}
-                                </a>
-                                <div class="desc col-md-8 col-sm-8 col-xs-12">
-                                  <h3 class="title">{{this.title}}</a></h3>
-                                    {{{md this.description}}}
-                                </div>
+                              </div>
+                              <div class="desc col-md-8 col-sm-8 col-xs-12">
+                                <h3 class="title">{{this.title}}</a></h3>
+                                  {{{md this.description}}}
+                              </div>
                             </div>
                           {{/each}}
                         </div>
