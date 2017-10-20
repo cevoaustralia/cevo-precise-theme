@@ -97,19 +97,39 @@
   },
   "network": [
     {
-      "type": "Github",
+      "type": "Blog",
       "username": "example",
-      "url": "http://github.com/example"
-    },
-    {
-      "type": "Twitter",
-      "username": "example",
-      "url": "http://twitter.com/example"
+      "url": "https://example.com"
     },
     {
       "type": "Email",
       "username": "hello",
       "url": "hello@example.com"
+    },
+    {
+      "type": "Github",
+      "username": "example",
+      "url": "https://github.com/example"
+    },
+    {
+      "type": "Linkedin",
+      "username": "hello",
+      "url": "https://www.linkedin.com/in/example"
+    },
+    {
+      "type": "Phone",
+      "username": "example",
+      "url": "+61400000000"
+    },
+    {
+      "type": "Twitter",
+      "username": "example",
+      "url": "https://twitter.com/example"
+    },
+    {
+      "type": "Other",
+      "username": "example",
+      "url": "https://example.com"
     }
   ],
   "conferences": [
