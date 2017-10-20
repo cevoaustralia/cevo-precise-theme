@@ -1,14 +1,12 @@
-# Precise Theme Starter
+# Cevo Precise Theme
 
-This is an example of how to create a theme for [Precise](http://precise.io) Portfolios and Profiles.
-Consider it a starter pack.  Use it a guide for your own theme.
+This provides the styling and layout for Cevo [Precise](http://precise.io) Portfolios and Profiles.
 
 ## So you want to theme a Portfolio or Profile
 
 Great!  Here's how you do it:
 
-1. Copy or Fork this repository
-2. Install development dependencies
+1. Install development dependencies
 3. Run the development server
 4. Create your desired HTML markup and CSS
 5. Package as a NPM
@@ -25,10 +23,10 @@ After cloning this repository, you need to install:
 With that done:
 
 1. Change to the directory your copied this repository.
-2. Install project depenencies using `npm install`
+2. Install project dependencies using `npm install` then `npm install npm@latest -g` then `npm install less -g`
 3. Run the developer server with `grunt`
-
-Open http://localhost:9001/profile in your browser. You should see a Profile with default styling.
+4. Open http://localhost:9001/profile in your browser to see a Profile with your styling.
+5. Open http://localhost:9001/portfolio in you browser to see a Portfolio with your styling.
 
 ## Make it look good
 
