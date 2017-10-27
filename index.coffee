@@ -11,6 +11,9 @@ Handlebars.registerHelper 'logo', (text) ->
   return 'fa-twitter-square'  if text == 'Twitter'
   return 'fa-linkedin-square'  if text == 'Linkedin'
   return 'fa-envelope-square' if text == 'Email'
+  return 'fa-rss' if text == 'Blog'
+  return 'fa-mobile' if text == 'Phone'
+  return 'fa-info' if text == 'Other'
 
 Handlebars.registerHelper 'truncate', (str, len) ->
   if str && str.length > len
