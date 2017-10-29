@@ -116,6 +116,7 @@ a.dotted-link:hover {
   font-size: 24px;
   margin-top: 0;
   margin-bottom: 15px;
+  max-width: 400px;
 }
 .header .profile-content .social a {
   background: #b0b7bf;
@@ -411,6 +412,9 @@ a.dotted-link:hover {
   .header .profile-content {
     float: none !important;
     text-align: center;
+  }
+  .header .profile-content .desc {
+    max-width: initial;
   }
   .header .logo {
     float: none !important;

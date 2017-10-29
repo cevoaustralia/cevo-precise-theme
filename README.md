@@ -24,6 +24,7 @@ With that done:
 
 1. Change to the directory your copied this repository.
 2. Install project dependencies using `npm install` then `npm install npm@latest -g` then `npm install less -g`
+3. Complte less to css with `grunt less`
 3. Run the developer server with `grunt`
 4. Open http://localhost:9001/profile in your browser to see a Profile with your styling.
 5. Open http://localhost:9001/portfolio in you browser to see a Portfolio with your styling.
@@ -55,7 +56,9 @@ can use from favourite templating language or stick with the one we used -- Hand
 
 * `portfolio.template`: Same as `profile.template` but for Portfolios.
 
-* `style.css`:  All your CSS.
+* `assets/js/`:  All your JS.
+
+* `assets/less/`:  All your CSS.
 
 Also worthy of a mention is the example Profile and Portfolio JSON. `exampleProfile.json`
 and `examplePortfolio.json`.  These files provide example data during development. You
@@ -85,8 +88,11 @@ When you are done with **making it look good** it's time to deploy:
 2. Stage the package.json change.
 3. Commit that change with a message like "release 0.1.5"
 4. Git tag ```git tag -a 0.1.5 -m 'release 0.1.5'```
-4. Push the change to git
-5. Package into tarball using
+5. Generate the css
+
+    $ grunt less
+
+6. Package into tarball using
 
     $ npm pack
 
