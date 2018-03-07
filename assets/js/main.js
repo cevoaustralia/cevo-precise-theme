@@ -9,5 +9,8 @@ jQuery(document).ready(function(p$) {
       }, 800);
     });
   });
+  if (window.requestFromDownloadService) {
+    p$('body').css({"background":"white"});
+  }
 });
 
