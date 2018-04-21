@@ -40,13 +40,21 @@ Handlebars.registerHelper 'latestProjects', (profile) ->
         projects.push project
   projects.slice(0,6)
 
+Handlebars.registerHelper 'tracks', (portfolio) ->
+  result = []
+  for snapshot in portfolio.snapshots
+    for track in snapshot.profile.tracks
+      if track.visible then result.push(track)
+  JSON.stringify(result)
+
 renderProfile   = (profile)   -> render 'profile',   profile
 renderPortfolio = (portfolio) -> render 'portfolio', portfolio
 
-render= (name, model) ->
+render = (name, model) ->
   js = fs.readFileSync "#{__dirname}/assets/js/main.js", 'utf-8'
   css = fs.readFileSync "#{__dirname}/assets/css/styles.css", 'utf-8'
   template = fs.readFileSync "#{__dirname}/#{name}.template", 'utf-8'
+
   options =
     js: js
     css: css

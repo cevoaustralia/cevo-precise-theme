@@ -34,9 +34,19 @@
     <header class="header">
         <div class="container">
             <div class="logo img-responsive pull-right"></div>
-            <div class="profile-content pull-left">
-              <h1 class="name">{{portfolio.name}}</h1>
-              <p class="desc">{{portfolio.comment}}</p>
+            <div class="row">
+              <div class="primary col-md-6 col-sm-6 col-xs-6">
+                <div class="profile-content pull-left">
+                  <h1 class="name">{{portfolio.name}}</h1>
+                  <p class="desc">{{portfolio.comment}}</p>
+                </div>
+              </div>
+              <div class="profile-content col-md-6 col-sm-6 col-xs-6">
+                <div id="tracks" style="width: 400px; height: 275px;"></div>
+                <p class="desc">
+                Team Shape for {{portfolio.name}}. Comprised of team members that collectively have the skills to get the job done every iteration.
+                </p>
+              </div>
             </div>
         </div>
     </header>
@@ -78,10 +88,17 @@
     <!-- Javascript -->
     <script type="text/javascript" src="https://static.precise.io/precise-theme-starter/assets/plugins/jquery-1.11.3.min.js"></script>
     <script type="text/javascript" src="https://static.precise.io/precise-theme-starter/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://static.precise.io/precise-theme-starter/assets/plugins/precise-tracks-0.1.0.min.js"></script>
+
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+
 
     <!-- custom js -->
     <script type="text/javascript">
       {{{js}}}
+      var portfolioTracks = JSON.parse('{{{tracks portfolio}}}')
+      PreciseTracks('tracks', portfolioTracks);
     </script>
 
 </body>
