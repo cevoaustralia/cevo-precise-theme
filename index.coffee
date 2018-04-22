@@ -40,12 +40,16 @@ Handlebars.registerHelper 'latestProjects', (profile) ->
         projects.push project
   projects.slice(0,6)
 
+Handlebars.registerHelper 'showTracks', (portfolio) ->
+  portfolio.tracks && portfolio.tracks.visible
+
 Handlebars.registerHelper 'tracks', (portfolio) ->
   result = []
   for snapshot in portfolio.snapshots
     for track in snapshot.profile.tracks
       if track.visible then result.push(track)
   JSON.stringify(result)
+
 
 renderProfile   = (profile)   -> render 'profile',   profile
 renderPortfolio = (portfolio) -> render 'portfolio', portfolio

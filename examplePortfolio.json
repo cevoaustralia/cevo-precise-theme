@@ -7,6 +7,10 @@
     "number": "0400 123 123",
     "email": "james.smith@example.com"
   },
+  "tracks": {
+    "visible": true,
+    "comment": "Odio voluptate necessitatibus. Omnis amet asperiores maiores est voluptate."
+  },
   "status": "active",
   "snapshots": [
     {

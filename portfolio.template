@@ -41,12 +41,14 @@
                   <p class="desc">{{portfolio.comment}}</p>
                 </div>
               </div>
+              {{#if (showTracks portfolio)}}
               <div class="profile-content col-md-6 col-sm-6 col-xs-6">
                 <div id="tracks" style="width: 400px; height: 275px;"></div>
                 <p class="desc">
-                Team Shape for {{portfolio.name}}. Comprised of team members that collectively have the skills to get the job done every iteration.
+                {{portfolio.tracks.comment}}
                 </p>
               </div>
+              {{/if}}
             </div>
         </div>
     </header>
@@ -97,8 +99,10 @@
     <!-- custom js -->
     <script type="text/javascript">
       {{{js}}}
-      var portfolioTracks = JSON.parse('{{{tracks portfolio}}}')
-      PreciseTracks('tracks', portfolioTracks);
+      {{#if (showTracks portfolio)}}
+        var portfolioTracks = JSON.parse('{{{tracks portfolio}}}')
+        PreciseTracks('tracks', portfolioTracks);
+      {{/if}}
     </script>
 
 </body>
