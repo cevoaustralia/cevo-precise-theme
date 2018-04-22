@@ -46,8 +46,9 @@ Handlebars.registerHelper 'showTracks', (portfolio) ->
 Handlebars.registerHelper 'tracks', (portfolio) ->
   result = []
   for snapshot in portfolio.snapshots
-    for track in snapshot.profile.tracks
-      if track.visible then result.push(track)
+    if snapshot.profile.tracks
+      for track in snapshot.profile.tracks
+        if track.visible then result.push(track)
   JSON.stringify(result)
 
 
