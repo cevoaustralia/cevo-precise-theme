@@ -43,7 +43,7 @@
               </div>
               {{#if (showTracks portfolio)}}
               <div class="profile-content col-md-6 col-sm-6 col-xs-6">
-                <div id="tracks" style="width: 400px; height: 275px;"></div>
+                <div id="tracks" data-tracks='{{{tracks portfolio}}}' style="width: 400px; height: 275px;"></div>
                 <p class="desc">
                 {{portfolio.tracks.comment}}
                 </p>
@@ -92,17 +92,9 @@
     <script type="text/javascript" src="https://static.precise.io/precise-theme-starter/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="https://static.precise.io/precise-theme-starter/assets/plugins/precise-tracks-0.1.0.min.js"></script>
 
-    <script src="https://code.highcharts.com/highcharts.js"></script>
-    <script src="https://code.highcharts.com/highcharts-more.js"></script>
-
-
     <!-- custom js -->
     <script type="text/javascript">
       {{{js}}}
-      {{#if (showTracks portfolio)}}
-        var portfolioTracks = JSON.parse('{{{tracks portfolio}}}')
-        PreciseTracks('tracks', portfolioTracks);
-      {{/if}}
     </script>
 
 </body>
