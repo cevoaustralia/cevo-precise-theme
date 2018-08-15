@@ -47,7 +47,7 @@
                   {{/each}}
                 </ul>
                 {{#if profile.links.pdf}}
-                  <a class="btn btn-cta-primary" href="{{profile.links.pdf}}"><i class="fa fa-download"></i> Download</a>
+                  <a class="btn btn-cta-primary download" href="{{profile.links.pdf}}"><i class="fa fa-download"></i> Download</a>
                 {{/if}}
             </div>
         </div>

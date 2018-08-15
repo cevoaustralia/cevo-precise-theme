@@ -16,6 +16,7 @@ jQuery(document).ready(function(p$) {
   }
   if (window.requestFromDownloadService) {
     p$('body').css({"background":"white"});
+    p$('.download').remove();
   }
 });
 
