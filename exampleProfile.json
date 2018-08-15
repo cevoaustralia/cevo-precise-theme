@@ -92,6 +92,13 @@
       "description": "Bachelor of Arts 2005"
     }
   ],
+  "certifications": [
+    {
+      "name": "PMP Level 1",
+      "place": "Project Management Institute",
+      "period": "March 2018"
+    }
+  ],
   "links":{
     "pdf": "http://example.com/profiles/1234"
   },

@@ -171,6 +171,9 @@ a.dotted-link:hover {
 .snapshots p {
   color: #434343;
 }
+.item {
+  page-break-inside: avoid;
+}
 .latest .item {
   margin-bottom: 30px;
 }
@@ -328,7 +331,7 @@ a.dotted-link:hover {
   font-size: 16px;
   position: relative;
   margin-top: 0;
-  margin-bottom: 10;
+  margin-bottom: 18px;
 }
 .skills .skillset .level-title .level-label {
   color: #ccd1d6;
@@ -337,7 +340,7 @@ a.dotted-link:hover {
   font-family: "Lato", arial, sans-serif;
   position: absolute;
   right: 0;
-  top: 0;
+  top: 17px;
 }
 .skills .skillset .level-bar {
   height: 15px;
@@ -347,24 +350,24 @@ a.dotted-link:hover {
   height: 15px;
   background: #ffa9a9;
 }
-.education .item {
+.item {
   margin-bottom: 30px;
 }
-.education .item:last-child {
+.item:last-child {
   margin-bottom: 0;
 }
-.education .item .title {
+.item h3 {
   font-size: 16px;
   margin-top: 0;
 }
-.education .item .university {
+.item h4 {
   font-family: "Lato", arial, sans-serif;
   font-size: 13px;
   color: #999;
   font-weight: 600;
   padding-left: 25px;
 }
-.education .item .university .year {
+.item h4 .year {
   color: #b0b7bf;
   font-weight: 500;
 }
@@ -384,6 +387,7 @@ a.dotted-link:hover {
   background: #32383e;
   color: #fff;
   padding: 10px 0;
+  page-break-inside: avoid;
 }
 .footer .copyright {
   line-height: 1.6;
@@ -405,6 +409,10 @@ a.dotted-link:hover {
   .header .profile-content {
     float: none !important;
     text-align: center;
+  }
+  .header .logo {
+    float: none !important;
+    margin: 0 auto;
   }
   .header .btn {
     margin-top: 30px;

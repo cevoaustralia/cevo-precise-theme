@@ -153,6 +153,22 @@
                 </aside>
                 {{/if}}
 
+                {{#if profile.certifications}}
+                <aside class="certification aside section">
+                    <div class="section-inner">
+                        <h2 class="heading">Certifications</h2>
+                        <div class="content">
+                          {{#each profile.certifications}}
+                            <div class="item">
+                              <h3 class="title"><i class="fa fa-certificate"></i> {{this.name}} </h3>
+                              <h4 class="place">{{this.place}} <span class="year">{{this.period}}</span></h4>
+                            </div>
+                          {{/each}}
+                        </div>
+                    </div>
+                </aside>
+                {{/if}}
+
                 {{#if profile.conferences}}
                 <aside class="list conferences aside section">
                     <div class="section-inner">
