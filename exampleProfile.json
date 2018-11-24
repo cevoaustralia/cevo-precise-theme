@@ -102,6 +102,25 @@
   "links":{
     "pdf": "http://example.com/profiles/1234"
   },
+  "tracks": [
+    {
+      "level": 3,
+      "visible": true,
+      "name": "Design Thinking",
+      "category": "Design"
+    },
+    {
+      "level": 4,
+      "visible": true,
+      "name": "Visual Design",
+      "category": "Design"
+    },
+    {
+      "level": 2,
+      "name": "Interaction Design",
+      "category": "Design"
+    }
+  ],
   "network": [
     {
       "type": "Github",

@@ -371,6 +371,28 @@ a.dotted-link:hover {
   color: #b0b7bf;
   font-weight: 500;
 }
+ul.list-inline {
+  padding-left: 0;
+  list-style: none;
+}
+ul.list-inline li.list-inline-item {
+  margin-right: .3rem;
+  margin-top: .5rem;
+  display: inline-block;
+}
+ul.list-inline .badge {
+  color: #fff;
+  background-color: #939ea9;
+  padding: 0.45em 0.75em;
+  border-radius: 10rem;
+  display: inline-block;
+  font-size: 80%;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+}
 .list ul li {
   margin-bottom: 10px;
 }

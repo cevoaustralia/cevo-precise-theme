@@ -21,10 +21,10 @@ Handlebars.registerHelper 'truncate', (str, len) ->
   else
     str
 
-Handlebars.registerHelper 'skillLevelAsPercentage', (level) ->
+Handlebars.registerHelper 'levelAsPercentage', (level) ->
   return "#{(level * 2) * 10}%"
 
-Handlebars.registerHelper 'skillLevelAsText', (level) ->
+Handlebars.registerHelper 'levelAsText', (level) ->
   switch level
     when 1 then "Awareness"
     when 2 then "Novice"

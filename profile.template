@@ -122,16 +122,26 @@
                         <h2 class="heading">Skills</h2>
                         <div class="content">
                             <div class="skillset">
-                                {{#each profile.skills}}
+                                {{#each profile.tracks}}
                                   <div class="item">
                                     <h3 class="level-title">{{this.name}}
-                                      <span class="level-label" data-toggle="tooltip" data-placement="left" data-animation="true" title="{{this.comment}}">{{skillLevelAsText this.level}}</span></h3>
+                                      <span class="level-label" data-toggle="tooltip" data-placement="left" data-animation="true">{{levelAsText this.level}}</span></h3>
                                       <div class="level-bar">
-                                        <div class="level-bar-inner" data-level="{{skillLevelAsPercentage this.level}}">
+                                        <div class="level-bar-inner" data-level="{{levelAsPercentage this.level}}">
                                           </div>
                                       </div>
+                                    </h3>
                                   </div>
                                 {{/each}}
+                                <div class="other-skills">
+                                  <ul class="list-inline">
+                                    {{#each profile.skills}}
+                                      <li class="list-inline-item">
+                                        <span class="badge">{{this.name}}</span>
+                                      </li>
+                                    {{/each}}
+                                  </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
