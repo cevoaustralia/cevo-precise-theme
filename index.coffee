@@ -14,6 +14,7 @@ Handlebars.registerHelper 'logo', (text) ->
   return 'fa-rss' if text == 'Blog'
   return 'fa-mobile' if text == 'Phone'
   return 'fa-info' if text == 'Other'
+  return 'fa-stack-overflow' if text == 'StackOverflow'
 
 Handlebars.registerHelper 'truncate', (str, len) ->
   if str && str.length > len

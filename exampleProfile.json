@@ -136,6 +136,11 @@
       "type": "Email",
       "username": "hello",
       "url": "hello@example.com"
+    },
+    {
+      "type": "StackOverflow",
+      "username": "hello",
+      "url": "http://stackoverflow.com/example"
     }
   ],
   "conferences": [
