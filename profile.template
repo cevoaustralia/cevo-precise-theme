@@ -128,6 +128,7 @@
                         <div class="content">
                             <div class="skillset">
                                 {{#each profile.tracks}}
+                                  {{#if this.visible}}
                                   <div class="item">
                                     <h3 class="level-title">{{this.name}}
                                       <span class="level-label" data-toggle="tooltip" data-placement="left" data-animation="true">{{levelAsText this.level}}</span></h3>
@@ -137,6 +138,7 @@
                                       </div>
                                     </h3>
                                   </div>
+                                  {{/if}}
                                 {{/each}}
                                 <div class="other-skills">
                                   <ul class="list-inline">
