@@ -131,7 +131,7 @@
                                   {{#if this.visible}}
                                   <div class="item">
                                     <h3 class="level-title">{{this.name}}
-                                      <span class="level-label" data-toggle="tooltip" data-placement="left" data-animation="true">{{levelAsText this.level}}</span></h3>
+                                      <span class="level-label" data-toggle="tooltip" data-placement="left" data-animation="true"></span></h3>
                                       <div class="level-bar">
                                         <div class="level-bar-inner" data-level="{{levelAsPercentage this.level}}">
                                           </div>

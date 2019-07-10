@@ -98,7 +98,7 @@ a.dotted-link {
     .profile-content {
 
         .name {
-            color: darken(@color, 20%);
+            color: @hero-text-color;
             font-size: 38px;
             margin-bottom: 5px;
             margin-top: 30px;
@@ -113,7 +113,7 @@ a.dotted-link {
         }
         .social {
             a {
-                background: lighten(@color, 20%);
+                background: lighten(@hero-text-color, 20%);
                 width: 36px;
                 height: 36px;
                 display: inline-block;
@@ -121,7 +121,7 @@ a.dotted-link {
                 color: #fff;
                 text-align: center;
                 &:hover {
-                    background: @color;
+                    background: @hero-text-color;
                 }
                 .fa {
                     font-size: 20px;
@@ -291,7 +291,7 @@ a.dotted-link {
         }
         .level-bar {
             height: 15px;
-            background: darken(@hero-background, 5%);
+            background: darken(@background, 10%);
         }
         .level-bar-inner {
             height: 15px;
