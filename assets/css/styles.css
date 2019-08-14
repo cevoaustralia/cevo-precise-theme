@@ -371,3 +371,17 @@ ul.list-inline .badge {
     width: 1360px;
   }
 }
+@media print {
+  body {
+    background-color: #fff;
+  }
+  .section-wrapper {
+    padding: 0;
+  }
+  footer {
+    display: none;
+  }
+  a.download {
+    display: none;
+  }
+}

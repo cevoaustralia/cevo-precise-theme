@@ -14,10 +14,6 @@ jQuery(document).ready(function(p$) {
       PreciseTracks('tracks', p$("#tracks").data("tracks"));
     })
   }
-  if (window.requestFromDownloadService) {
-    p$('body').css({"background":"white"});
-    p$('.download').remove();
-  }
 });
 
 function loadHighcharts() {
