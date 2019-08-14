@@ -47,7 +47,7 @@
         "title": "Qantas app for Apple Watch",
         "period": "",
         "description": "Qantas for Apple Watch is a great example of how we are making flying even easier for our customers. Nam id quibusdam qui consequatur eveniet. Sunt ut illum optio commodi dolor. Hic placeat eum quos accusamus. Ea nemo consectetur animi laboriosam totam.",
-        "coverImage": ""
+        "coverImage": "http://www.qantas.com/img/150x150/apple-watch-flight.png"
         }
       ]
     },
@@ -92,9 +92,36 @@
       "description": "Bachelor of Arts 2005"
     }
   ],
+  "certifications": [
+    {
+      "name": "PMP Level 1",
+      "place": "Project Management Institute",
+      "period": "March 2018"
+    }
+  ],
   "links":{
     "pdf": "http://example.com/profiles/1234"
   },
+  "tracks": [
+    {
+      "level": 3,
+      "visible": true,
+      "name": "Design Thinking",
+      "category": "Design"
+    },
+    {
+      "level": 4,
+      "visible": true,
+      "name": "Visual Design",
+      "category": "Design"
+    },
+    {
+      "level": 2,
+      "visible": true,
+      "name": "Interaction Design",
+      "category": "Design"
+    }
+  ],
   "network": [
     {
       "type": "Blog",
@@ -127,9 +154,14 @@
       "url": "https://twitter.com/example"
     },
     {
-      "type": "Other",
-      "username": "example",
-      "url": "https://example.com"
+      "type": "Email",
+      "username": "hello",
+      "url": "hello@example.com"
+    },
+    {
+      "type": "StackOverflow",
+      "username": "hello",
+      "url": "http://stackoverflow.com/example"
     }
   ],
   "conferences": [

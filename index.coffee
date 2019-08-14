@@ -7,13 +7,15 @@ Handlebars = require 'handlebars'
 Handlebars.registerHelper 'md', marked
 
 Handlebars.registerHelper 'logo', (text) ->
-  return 'fa-link' if text == 'Blog'
   return 'fa-envelope-square' if text == 'Email'
   return 'fa-github-square'   if text == 'Github'
   return 'fa-linkedin-square'  if text == 'Linkedin'
   return 'fa-phone-square'  if text == 'Phone'
   return 'fa-twitter-square'  if text == 'Twitter'
   return 'fa-link'  if text == 'Other'
+  return 'fa-rss' if text == 'Blog'
+  return 'fa-mobile' if text == 'Phone'
+  return 'fa-stack-overflow' if text == 'StackOverflow'
 
 Handlebars.registerHelper 'truncate', (str, len) ->
   if str && str.length > len
@@ -21,10 +23,10 @@ Handlebars.registerHelper 'truncate', (str, len) ->
   else
     str
 
-Handlebars.registerHelper 'skillLevelAsPercentage', (level) ->
+Handlebars.registerHelper 'levelAsPercentage', (level) ->
   return "#{(level * 2) * 10}%"
 
-Handlebars.registerHelper 'skillLevelAsText', (level) ->
+Handlebars.registerHelper 'levelAsText', (level) ->
   switch level
     when 1 then "Awareness"
     when 2 then "Novice"
@@ -40,13 +42,26 @@ Handlebars.registerHelper 'latestProjects', (profile) ->
         projects.push project
   projects.slice(0,6)
 
+Handlebars.registerHelper 'showTracks', (portfolio) ->
+  portfolio.tracks && portfolio.tracks.visible
+
+Handlebars.registerHelper 'tracks', (portfolio) ->
+  result = []
+  for snapshot in portfolio.snapshots
+    if snapshot.profile.tracks
+      for track in snapshot.profile.tracks
+        if track.visible then result.push(track)
+  JSON.stringify(result)
+
+
 renderProfile   = (profile)   -> render 'profile',   profile
 renderPortfolio = (portfolio) -> render 'portfolio', portfolio
 
-render= (name, model) ->
+render = (name, model) ->
   js = fs.readFileSync "#{__dirname}/assets/js/main.js", 'utf-8'
   css = fs.readFileSync "#{__dirname}/assets/css/styles.css", 'utf-8'
   template = fs.readFileSync "#{__dirname}/#{name}.template", 'utf-8'
+
   options =
     js: js
     css: css

@@ -56,9 +56,9 @@ can use from favourite templating language or stick with the one we used -- Hand
 
 * `portfolio.template`: Same as `profile.template` but for Portfolios.
 
-* `assets/js/`:  All your JS.
-
-* `assets/less/`:  All your CSS.
+* `assets`:  This directory contains any JS and CSS. We've using the Less precomplier
+for CSS so just be sure to make changes to the `.less` files.  The Grunt build generates
+the CSS.  Be sure to add the generated css files to your version control.
 
 Also worthy of a mention is the example Profile and Portfolio JSON. `exampleProfile.json`
 and `examplePortfolio.json`.  These files provide example data during development. You

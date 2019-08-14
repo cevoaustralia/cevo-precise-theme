@@ -46,6 +46,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-release');
   grunt.loadNpmTasks('grunt-contrib-less');
   // Default task.
-  grunt.registerTask('default', ['express', 'express-keepalive']);
+  grunt.registerTask('default', ['less', 'express', 'express-keepalive']);
 
 };

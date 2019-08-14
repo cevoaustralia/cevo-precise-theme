@@ -7,6 +7,10 @@
     "number": "0400 123 123",
     "email": "james.smith@example.com"
   },
+  "tracks": {
+    "visible": true,
+    "comment": "Odio voluptate necessitatibus. Omnis amet asperiores maiores est voluptate."
+  },
   "status": "active",
   "snapshots": [
     {
@@ -19,7 +23,12 @@
           "bio": "Odio voluptate necessitatibus. Omnis amet asperiores maiores est voluptate. Ad voluptas consequatur atque ut est id id. Eveniet qui exercitationem cumque dignissimos. Enim et officiis sunt. Repellat quos est quas earum sed consequatur pariatur.Pariatur eveniet illum. Sunt quis excepturi quasi. Veritatis ut ipsa. Excepturi in fugit nostrum deleniti. Soluta quo qui non. Quisquam voluptatibus incidunt ut dolorum dolores. Doloremque saepe unde aut. Aut voluptatem perspiciatis.",
           "passion": "Passionate storyteller. Constantly in motion. Eager traveler & cultural explorer.",
           "photo_url": "http://api.randomuser.me/portraits/women/54.jpg"
-        }
+        },
+        "tracks":[
+          {"level":2,"visible":true,"name":"Agile","category":"Execution","desc":"Embodies and promotes practices to ensure excellent quality products and services"},
+          {"level":3,"visible":true,"name":"Visual Design","category":"Design","desc":""},
+          {"level":2,"visible":true,"name":"User Research","category":"Design","desc":""}
+        ]
       }
     },
     {
@@ -32,8 +41,15 @@
           "bio": "An expert in crafting user-centered design solutions by incorporating business strategy, research, and analytics.",
           "passion": "Eveniet qui exercitationem cumque dignissimos. Enim et officiis sunt. Repellat quos est quas earum sed consequatur pariatur.Pariatur eveniet illum.",
           "photo_url": "http://api.randomuser.me/portraits/men/25.jpg"
-        }
+        },
+        "tracks":[
+          {"level":4,"visible":true,"name":"Agile","category":"Execution","desc":""},
+          {"level":3,"visible":true,"name":"Backend","category":"Engineering","desc":""},
+          {"level":4,"visible":true,"name":"Mobile","category":"Engineering","desc":""}
+        ]
       }
     }
   ]
 }
+
+

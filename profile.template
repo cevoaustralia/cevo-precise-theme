@@ -13,7 +13,7 @@
     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 
     <!-- TODO: replace these with CDN -->
-    <link rel="stylesheet" href="https://static.precise.io/precise-theme-starter/assets/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://static.precise.io/precise-theme-starter/assets/plugins/bootstrap/css/bootstrap-no-print.min.css">
     <link rel="stylesheet" href="https://static.precise.io/precise-theme-starter/assets/plugins/font-awesome/css/font-awesome.css">
 
     <!-- Theme -->
@@ -47,7 +47,7 @@
                   {{/each}}
                 </ul>
                 {{#if profile.links.pdf}}
-                  <a class="btn btn-cta-primary" href="{{profile.links.pdf}}"><i class="fa fa-download"></i> Download</a>
+                  <a class="btn btn-cta-primary download" href="{{profile.links.pdf}}"><i class="fa fa-download"></i> Download</a>
                 {{/if}}
             </div>
         </div>
@@ -72,15 +72,22 @@
                         <div class="content">
                           {{#each (latestProjects profile)}}
                             <div class="item row">
-                              <a class="col-md-4 col-sm-4 col-xs-12" href="{{this.url}}" target="_blank">
-                                {{#if this.coverImage}}
-                                  <img class="img-responsive project-image" width="115" src="{{this.coverImage}}"/>
-                                {{/if}}
-                                </a>
+                              {{#if this.coverImage}}
+                                <div class="col-md-4 col-sm-4 col-xs-12">
+                                    <a href="{{this.url}}" target="_blank">
+                                      <img class="img-responsive project-image" width="115" src="{{this.coverImage}}"/>
+                                    </a>
+                                </div>
                                 <div class="desc col-md-8 col-sm-8 col-xs-12">
-                                  <h3 class="title">{{this.title}}</a></h3>
+                                  <h3 class="title">{{this.title}} {{#if this.period }} - <span class="year">{{this.period}}</span> {{/if}}</h3>
                                     {{{md this.description}}}
                                 </div>
+                              {{else}}
+                                <div class="desc col-md-12 col-sm-12 col-xs-12">
+                                  <h3 class="title">{{this.title}} {{#if this.period }} - <span class="year">{{this.period}}</span> {{/if}}</h3>
+                                    {{{md this.description}}}
+                                </div>
+                              {{/if}}
                             </div>
                           {{/each}}
                         </div>
@@ -120,16 +127,28 @@
                         <h2 class="heading">Skills</h2>
                         <div class="content">
                             <div class="skillset">
-                                {{#each profile.skills}}
+                                {{#each profile.tracks}}
+                                  {{#if this.visible}}
                                   <div class="item">
                                     <h3 class="level-title">{{this.name}}
-                                      <span class="level-label" data-toggle="tooltip" data-placement="left" data-animation="true" title="{{this.comment}}">{{skillLevelAsText this.level}}</span></h3>
+                                      <span class="level-label" data-toggle="tooltip" data-placement="left" data-animation="true"></span></h3>
                                       <div class="level-bar">
-                                        <div class="level-bar-inner" data-level="{{skillLevelAsPercentage this.level}}">
+                                        <div class="level-bar-inner" data-level="{{levelAsPercentage this.level}}">
                                           </div>
                                       </div>
+                                    </h3>
                                   </div>
+                                  {{/if}}
                                 {{/each}}
+                                <div class="other-skills">
+                                  <ul class="list-inline">
+                                    {{#each profile.skills}}
+                                      <li class="list-inline-item">
+                                        <span class="badge">{{this.name}}</span>
+                                      </li>
+                                    {{/each}}
+                                  </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -146,6 +165,22 @@
                                 <h4 class="university">{{this.place}} <span class="year">{{this.period}}</span></h4>
                               </div>
                             {{/each}}
+                        </div>
+                    </div>
+                </aside>
+                {{/if}}
+
+                {{#if profile.certifications}}
+                <aside class="certification aside section">
+                    <div class="section-inner">
+                        <h2 class="heading">Certifications</h2>
+                        <div class="content">
+                          {{#each profile.certifications}}
+                            <div class="item">
+                              <h3 class="title"><i class="fa fa-certificate"></i> {{this.name}} </h3>
+                              <h4 class="place">{{this.place}} <span class="year">{{this.period}}</span></h4>
+                            </div>
+                          {{/each}}
                         </div>
                     </div>
                 </aside>
