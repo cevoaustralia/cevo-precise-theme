@@ -378,6 +378,16 @@ ul.list-inline .badge {
   .section-wrapper {
     padding: 0;
   }
+  .sections-wrapper {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .section {
+    margin-bottom: 0;
+  }
+  .section .section-inner {
+    padding: 20px 30px;
+  }
   footer {
     display: none;
   }
