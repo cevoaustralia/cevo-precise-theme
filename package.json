@@ -9,7 +9,7 @@
   "dependencies": {
     "coffee-script": "^1.7.1",
     "handlebars": "~2.0.0",
-    "marked": "^0.3.3"
+    "marked": "^0.8.2"
   },
   "bundledDependencies": [
     "coffee-script",
